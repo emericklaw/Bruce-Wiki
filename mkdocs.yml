@@ -1,0 +1,23 @@
+site_name: Bruce Wiki
+repo_url: https://github.com/BruceDevices/firmware
+repo_name: GitHub
+site_url: https://bruce.computer
+
+theme:
+  name: material
+  palette:
+    - scheme: slate  # Dark mode only (or add toggle for light/dark switch)
+      primary: deep purple
+      accent: purple
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

@@ -141,6 +141,9 @@ This feature does a lot of things at the same time, such as:
 - Deauth nearby WiFi networks in different channels
 - Collect and save HandShakes (EAPOL)
 
+## Responder
+[Responder is a well known tool](https://github.com/lgandx/Responder) for exploiting infrastructures, one of the things it does is LLMNR Poisoning, which is what this function in Bruce does (thanks to https://github.com/7h30th3r0n3)
+
 ## Config
 ### Add Evil Wifi
 Adds an SSID into the list so you can choose it with ease when opening an Evil Portal

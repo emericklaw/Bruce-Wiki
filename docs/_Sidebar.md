@@ -54,6 +54,8 @@
   * [DPWO-ESP32](https://github.com/pr3y/Bruce/wiki/WiFi#dpwo-esp32)
   * [Evil Portal](https://github.com/pr3y/Bruce/wiki/WiFi#evil-portal)
   * [Scan Hosts](https://github.com/pr3y/Bruce/wiki/WiFi#scan-hosts)
+  * [Responder](https://github.com/pr3y/Bruce/wiki/WiFi#responder)
+  * [Brucegotchi](https://github.com/pr3y/Bruce/wiki/WiFi#brucegotchi)
   * [TCP Listener](https://github.com/pr3y/Bruce/wiki/WiFi#tcp-listener)
   * [TCP Client](https://github.com/pr3y/Bruce/wiki/WiFi#tcp-client)
   * [Wireguard Tunneling](https://github.com/pr3y/Bruce/wiki/WiFi#wireguard-tunneling)
