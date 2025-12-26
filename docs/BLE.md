@@ -1,3 +1,7 @@
+# BLE
+
+---
+
 # Disconnect BLE
 If BLE is currently active, use this option to disconnect. No further explanation needed.
 
