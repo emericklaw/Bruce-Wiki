@@ -43,11 +43,11 @@ For boards that do not have a display and buttons, an [headless mode was added](
 A sample env for the [esp32-s3-devkitc-1 board](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html) is [defined here](https://github.com/pr3y/Bruce/blob/3813139ae0fc220180e7d443d4d6caea3e689224/platformio.ini#L845), it should work with any headless ESP32-S3 boards.
 
 
-# What kind of files i need to put on the SD card?
+# What kind of files I need to put on the SD card?
 
 There is some file examples of what you can do [in here](https://github.com/pr3y/Bruce/tree/main/sd_files), including [evil portal templates](https://github.com/pr3y/Bruce/tree/main/sd_files/portals), [nfcs](https://github.com/pr3y/Bruce/tree/main/sd_files/nfc) and [infrared](https://github.com/pr3y/Bruce/tree/main/sd_files/infrared)
 
-# How do i customize Bruce?
+# How do I customize Bruce?
 
 You can choose a startup image other than Bruce's default by adding your image as 'boot.jpg' or 'boot.gif' on the root of the filesystems, you can also choose a startup sound if you have a file named 'boot.wav' for it.
 Also its possible to render images on the Bruce itself via the LittleFS or SD Card manager.
