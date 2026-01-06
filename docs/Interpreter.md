@@ -1,14 +1,14 @@
 ## Manual for Coding in JavaScript to Bruce
 
 The Bruce Interpreter allows you to create scripts or even games using JavaScript.
-For legacy version of this page go here: [InterpreterLegacy](InterpreterLegacy)
+For legacy version of this page go here: [InterpreterLegacy](InterpreterLegacy.md)
 
 Some [example scripts are here](https://github.com/pr3y/Bruce/tree/main/sd_files/interpreter).
 
 You can copy your favourite scripts in the `/scripts` folder and have them listed in the ["Scripts" menu](https://github.com/pr3y/Bruce/issues/258).
 
 For easier development, you can use [this bash script to upload code directly via serial](https://github.com/eadmaster/Bruce/blob/53090dabfdfb1ed19314b99abb441961c29469b2/bin/bruceserialrun). (linux only)
-Or this [TypeScript developement SDK](InterpreterTypescript) works in linux and windows.
+Or this [TypeScript developement SDK](InterpreterTypescript.md) works in linux and windows.
 
 ### Important: JavaScript Compatibility
 
@@ -20,7 +20,7 @@ Or this [TypeScript developement SDK](InterpreterTypescript) works in linux and 
   - ❌ **No** External npm module imports.
   - ❌ **No** `Object.entries()`, `Promise`, `async/await`, `setInterval`, `setTimeout` (for now).
 
-If you want modern JS features as well as TypeScript support you can go [here](InterpreterTypescript)
+If you want modern JS features as well as TypeScript support you can go [here](InterpreterTypescript.md)
 
 ### Uploading Your Scripts to Bruce
 
@@ -2882,7 +2882,7 @@ Lists the contents of a directory.
 
 #### Returns
 
-[`Dirent`](#dirent)[]
+[`Dirent`](#storagedirent)[]
 
 An array of filenames or `Dirent` objects if `withFileTypes` is `true`.
 
