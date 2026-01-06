@@ -3,9 +3,9 @@
 The Bruce Interpreter allows you to create scripts or even games using JavaScript.
 For legacy version of this page go here: [InterpreterLegacy](InterpreterLegacy.md)
 
-Some [example scripts are here](https://github.com/pr3y/Bruce/tree/main/sd_files/interpreter).
+Some [example scripts are here](https://github.com/BruceDevices/firmware/tree/main/sd_files/interpreter).
 
-You can copy your favourite scripts in the `/scripts` folder and have them listed in the ["Scripts" menu](https://github.com/pr3y/Bruce/issues/258).
+You can copy your favourite scripts in the `/scripts` folder and have them listed in the ["Scripts" menu](https://github.com/BruceDevices/firmware/issues/258).
 
 For easier development, you can use [this bash script to upload code directly via serial](https://github.com/eadmaster/Bruce/blob/53090dabfdfb1ed19314b99abb441961c29469b2/bin/bruceserialrun). (linux only)
 Or this [TypeScript developement SDK](InterpreterTypescript.md) works in linux and windows.
@@ -27,7 +27,7 @@ If you want modern JS features as well as TypeScript support you can go [here](I
 When uploading scripts to Bruce, keep in mind:
 
 - **Only JavaScript (`.js`) files can be uploaded.**
-- If you have **TypeScript (`.ts`)** files, you must first [**compile it to JavaScript** (`.js`)](https://github.com/pr3y/Bruce/wiki/InterpreterTypescript.md).
+- If you have **TypeScript (`.ts`)** files, you must first [**compile it to JavaScript** (`.js`)](https://github.com/BruceDevices/firmware/wiki/InterpreterTypescript.md).
 
 ## Documentation
 
@@ -2664,7 +2664,7 @@ The received string.
 serial.cmd(command: string): boolean;
 ```
 
-Executes a serial command list: https://github.com/pr3y/Bruce/wiki/Serial.
+Executes a serial command list: https://github.com/BruceDevices/firmware/wiki/Serial.
 
 ### Parameters
 

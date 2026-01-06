@@ -4,25 +4,25 @@ This section was ported from [justinknight93/Doolittle](https://github.com/justi
 
 Some changes were made and some new functions were added, and more are to be add.
 
-Some [example scripts are here](https://github.com/pr3y/Bruce/tree/main/sd_files/interpreter).
+Some [example scripts are here](https://github.com/BruceDevices/firmware/tree/main/sd_files/interpreter).
 
-You can copy your favourite scripts in the `/scripts` folder and have them listed in the ["Scripts" menu](https://github.com/pr3y/Bruce/issues/258).
+You can copy your favourite scripts in the `/scripts` folder and have them listed in the ["Scripts" menu](https://github.com/BruceDevices/firmware/issues/258).
 
 For easier development, you can use [this bash script to upload code directly via serial](https://github.com/eadmaster/Bruce/blob/53090dabfdfb1ed19314b99abb441961c29469b2/bin/bruceserialrun).
 
 API Reference for Native Functions Accessible from JS:
 
- - [General](https://github.com/pr3y/Bruce/wiki/Interpreter#general)
- - [Board info](https://github.com/pr3y/Bruce/wiki/Interpreter#get-some-board-information)
- - [Wifi](https://github.com/pr3y/Bruce/wiki/Interpreter#wifi-functions)
- - [TFT Display](https://github.com/pr3y/Bruce/wiki/Interpreter#tft-display-functions)
- - [Keyboard](https://github.com/pr3y/Bruce/wiki/Interpreter#keyboard-inputs)
- - [Storage](https://github.com/pr3y/Bruce/wiki/Interpreter#storage-functions)
- - [Serial](https://github.com/pr3y/Bruce/wiki/Interpreter#serial-functions)
- - [Audio](https://github.com/pr3y/Bruce/wiki/Interpreter#audio-functions)
- - [IR](https://github.com/pr3y/Bruce/wiki/Interpreter#ir-functions)
- - [Subghz](https://github.com/pr3y/Bruce/wiki/Interpreter#subghzrf-functions)
- - [Badusb](https://github.com/pr3y/Bruce/wiki/Interpreter#badusb-functions)
+ - [General](https://github.com/BruceDevices/firmware/wiki/Interpreter#general)
+ - [Board info](https://github.com/BruceDevices/firmware/wiki/Interpreter#get-some-board-information)
+ - [Wifi](https://github.com/BruceDevices/firmware/wiki/Interpreter#wifi-functions)
+ - [TFT Display](https://github.com/BruceDevices/firmware/wiki/Interpreter#tft-display-functions)
+ - [Keyboard](https://github.com/BruceDevices/firmware/wiki/Interpreter#keyboard-inputs)
+ - [Storage](https://github.com/BruceDevices/firmware/wiki/Interpreter#storage-functions)
+ - [Serial](https://github.com/BruceDevices/firmware/wiki/Interpreter#serial-functions)
+ - [Audio](https://github.com/BruceDevices/firmware/wiki/Interpreter#audio-functions)
+ - [IR](https://github.com/BruceDevices/firmware/wiki/Interpreter#ir-functions)
+ - [Subghz](https://github.com/BruceDevices/firmware/wiki/Interpreter#subghzrf-functions)
+ - [Badusb](https://github.com/BruceDevices/firmware/wiki/Interpreter#badusb-functions)
 
 [New alternative Flipper-like API](https://github.com/Tawank/bruce-js-tooling/)
 
@@ -479,7 +479,7 @@ API Reference for Native Functions Accessible from JS:
 
 ### `serialCmd(cmd : string)`
 
-**Description**: Execute a supported serial command (see the [list here](https://github.com/pr3y/Bruce/wiki/Serial));
+**Description**: Execute a supported serial command (see the [list here](https://github.com/BruceDevices/firmware/wiki/Serial));
 
 **Parameters**:
 

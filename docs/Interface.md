@@ -11,7 +11,7 @@ When you are on the main menu of Bruce, you can utilize the following keyboard s
 - `f` : Start the file manager on SD card (if present).
 - `l` : Start the file manager on LittleFS.
 
-After [#1488](https://github.com/pr3y/Bruce/pull/1488), you can now customize these keys with a `/shortcuts.json` file.
+After [#1488](https://github.com/BruceDevices/firmware/pull/1488), you can now customize these keys with a `/shortcuts.json` file.
 
 example:
 
@@ -32,7 +32,7 @@ example:
 
 ````
 
-The action string on the right can be [any supported serial command](https://github.com/pr3y/Bruce/wiki/Serial).
+The action string on the right can be [any supported serial command](https://github.com/BruceDevices/firmware/wiki/Serial).
 
  > [!TIP]
 > Uppercase/lowercase letters are considered different and so can have different actions associated. Symbols are also supported as trigger keys.

@@ -1,7 +1,7 @@
 
 # How to transfer files to/from the SD/LittleFS memory?
 
-Use the [WebUI](https://github.com/pr3y/Bruce/wiki/Others#webui)
+Use the [WebUI](https://github.com/BruceDevices/firmware/wiki/Others#webui)
 
 
 # Default passwords?
@@ -22,7 +22,7 @@ RF signals propagate in all directions and does not require a line of sight, but
    - use a multimeter or an oscilloscope to check activity on the data pin/LED/antenna.
    - use another device to check and compare the signals. e.g. [rtl_433](https://github.com/merbanan/rtl_433) for RF, [Tasmota](https://tasmota.github.io/docs/Tasmota-IR/) or a [Broadlink RM4 Pro](https://www.ibroadlink.com/productinfo/762672.html) for both IR and RF.
  - most RF modules only supports the 433MHz frequency with ASK/OOK modulation. Check if your `.sub` file or source signal is compatible.
- - check the [serial log](https://github.com/pr3y/Bruce/wiki/Serial) for errors, some signals may [fail to decode](https://github.com/pr3y/Bruce/issues/216).
+ - check the [serial log](https://github.com/BruceDevices/firmware/wiki/Serial) for errors, some signals may [fail to decode](https://github.com/BruceDevices/firmware/issues/216).
  - even if the signal decodes properly, some devices may use [rolling codes](https://en.m.wikipedia.org/wiki/Rolling_code) or other security mechanism to prevent replay attacks.
 
 
@@ -35,17 +35,17 @@ e.g. BadUSB is only available on ESP32-S3-based devices.
 
 # Port to other boards?
 
-For unsupported boards you have to manually add a new [configuration environment](https://docs.platformio.org/en/latest/projectconf/sections/env/index.html) in the [platformio.ini](https://github.com/pr3y/Bruce/blob/main/platformio.ini), and define the pins for the modules to be connected, buttons and LCD.
-Then, [compile the firmware for your new env](https://github.com/pr3y/Bruce/wiki/Building-from-source). Depending on the board more code changes may be needed.
+For unsupported boards you have to manually add a new [configuration environment](https://docs.platformio.org/en/latest/projectconf/sections/env/index.html) in the [platformio.ini](https://github.com/BruceDevices/firmware/blob/main/platformio.ini), and define the pins for the modules to be connected, buttons and LCD.
+Then, [compile the firmware for your new env](https://github.com/BruceDevices/firmware/wiki/Building-from-source). Depending on the board more code changes may be needed.
 
-For boards that do not have a display and buttons, an [headless mode was added](https://github.com/pr3y/Bruce/issues/107). Headless boards can be controlled only via the [WebUI](https://github.com/pr3y/Bruce/wiki/Others#webui) and [serial commands](https://github.com/pr3y/Bruce/wiki/Serial), and provide a subset of all the Bruce features.
+For boards that do not have a display and buttons, an [headless mode was added](https://github.com/BruceDevices/firmware/issues/107). Headless boards can be controlled only via the [WebUI](https://github.com/BruceDevices/firmware/wiki/Others#webui) and [serial commands](https://github.com/BruceDevices/firmware/wiki/Serial), and provide a subset of all the Bruce features.
 
-A sample env for the [esp32-s3-devkitc-1 board](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html) is [defined here](https://github.com/pr3y/Bruce/blob/3813139ae0fc220180e7d443d4d6caea3e689224/platformio.ini#L845), it should work with any headless ESP32-S3 boards.
+A sample env for the [esp32-s3-devkitc-1 board](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html) is [defined here](https://github.com/BruceDevices/firmware/blob/3813139ae0fc220180e7d443d4d6caea3e689224/platformio.ini#L845), it should work with any headless ESP32-S3 boards.
 
 
 # What kind of files I need to put on the SD card?
 
-There is some file examples of what you can do [in here](https://github.com/pr3y/Bruce/tree/main/sd_files), including [evil portal templates](https://github.com/pr3y/Bruce/tree/main/sd_files/portals), [nfcs](https://github.com/pr3y/Bruce/tree/main/sd_files/nfc) and [infrared](https://github.com/pr3y/Bruce/tree/main/sd_files/infrared)
+There is some file examples of what you can do [in here](https://github.com/BruceDevices/firmware/tree/main/sd_files), including [evil portal templates](https://github.com/BruceDevices/firmware/tree/main/sd_files/portals), [nfcs](https://github.com/BruceDevices/firmware/tree/main/sd_files/nfc) and [infrared](https://github.com/BruceDevices/firmware/tree/main/sd_files/infrared)
 
 # How do I customize Bruce?
 
@@ -55,6 +55,6 @@ Also its possible to render images on the Bruce itself via the LittleFS or SD Ca
 # Themes
 Now its possible to have other themes for the menu functionalities!
 
-See the [guide here on how to create them](https://github.com/pr3y/Bruce/tree/main/sd_files/themes).
+See the [guide here on how to create them](https://github.com/BruceDevices/firmware/tree/main/sd_files/themes).
 
 To look for community themes, for now you can look at this thread in Bruce discord: https://discord.com/channels/1264994142769909854/1351879900037906462

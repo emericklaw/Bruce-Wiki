@@ -22,11 +22,11 @@ Clonable RFID tags pose a security risk, as cloning involves creating a duplicat
 
 - **RFID 13.56MHz**
   - **M5Stack [RFID2](https://docs.m5stack.com/en/unit/rfid2) module**
-  - **MFRC-522** - via [I2C](https://github.com/pr3y/Bruce/blob/main/media/connections/rc522_stick.jpg) (Select `M5 RFID2` in the config menu)
-  - **PN532** - via [I2C](https://github.com/pr3y/Bruce/blob/main/media/connections/pn532_i2c.jpg), [SPI](https://github.com/pr3y/Bruce/blob/main/media/connections/pn532_spi.jpg), or [BLE](https://why.yuyeye.cc/post-images/1568433091524.jpg)
+  - **MFRC-522** - via [I2C](https://github.com/BruceDevices/firmware/blob/main/media/connections/rc522_stick.jpg) (Select `M5 RFID2` in the config menu)
+  - **PN532** - via [I2C](https://github.com/BruceDevices/firmware/blob/main/media/connections/pn532_i2c.jpg), [SPI](https://github.com/BruceDevices/firmware/blob/main/media/connections/pn532_spi.jpg), or [BLE](https://why.yuyeye.cc/post-images/1568433091524.jpg)
   
 - **RFID 125kHz**
-  - **RDM6300** ([Connection Schema](https://github.com/pr3y/Bruce/pull/182#issuecomment-2287692412))
+  - **RDM6300** ([Connection Schema](https://github.com/BruceDevices/firmware/pull/182#issuecomment-2287692412))
 
 ## Features
 

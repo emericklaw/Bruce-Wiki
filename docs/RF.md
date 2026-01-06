@@ -55,10 +55,10 @@ M5 RF433T/R modules or unofficial modules.
 If you are using a StickCPlus (1.1 or 2), you will be presented to two options of CC1101
 
 #### CC1101 (legacy)
-This setup is designed to use only the CC1101 in the bus, using [THIS setup](https://github.com/pr3y/Bruce/blob/main/media/connections/cc1101_stick.jpg)
+This setup is designed to use only the CC1101 in the bus, using [THIS setup](https://github.com/BruceDevices/firmware/blob/main/media/connections/cc1101_stick.jpg)
 
 #### CC1101 (Shared SPI)
-This setup is designed to share the SPI bus with the SD Card, but in this case you ned to add a transistor into the circuit, using [THIS Setup](https://github.com/pr3y/Bruce/blob/main/media/connections/cc1101_stick_SDCard.jpg)
+This setup is designed to share the SPI bus with the SD Card, but in this case you ned to add a transistor into the circuit, using [THIS Setup](https://github.com/BruceDevices/firmware/blob/main/media/connections/cc1101_stick_SDCard.jpg)
 
 
 ---
@@ -72,7 +72,7 @@ This setup is designed to share the SPI bus with the SD Card, but in this case y
   - **Modulation**: Only ASK/OOK
   - **Connection**: Easier to connect
 
-- **[CC1101 SPI Module](https://github.com/pr3y/Bruce/wiki/CC1101)**
+- **[CC1101 SPI Module](https://github.com/BruceDevices/firmware/wiki/CC1101)**
   - **Frequency Range**: Supports multiple frequencies and modulations
   - **Connection**: More complicated, can be tested with exti/o2 from M5Stack
 
@@ -112,5 +112,5 @@ Bruce can now send raw formats similar to those supported in [this repository](h
 
 1. Via the **Custom SubGhz** app in the **RF** menu.
 2. Via the **SDCard/LittleFS** file manager in the **Files** menu.
-3. Via the **WebUI** by clicking the [antenna-like button next to the file](https://github.com/pr3y/Bruce/pull/124).
-4. Via a [serial command](https://github.com/pr3y/Bruce/wiki/Serial), such as:
+3. Via the **WebUI** by clicking the [antenna-like button next to the file](https://github.com/BruceDevices/firmware/pull/124).
+4. Via a [serial command](https://github.com/BruceDevices/firmware/wiki/Serial), such as:

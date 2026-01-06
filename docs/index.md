@@ -2,7 +2,7 @@
 
 1. <a href="#what">What Is Bruce?</a>
 2. <a href="#purpose">What Is Bruce For?</a>
-3. <a href="https://github.com/pr3y/Bruce/wiki/FAQ">FAQ</a>
+3. <a href="https://github.com/BruceDevices/firmware/wiki/FAQ">FAQ</a>
 
 <a name="what" />
 

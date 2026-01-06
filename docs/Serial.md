@@ -1,4 +1,4 @@
-Bruce also accept command inputs via serial port after https://github.com/pr3y/Bruce/pull/84.
+Bruce also accept command inputs via serial port after https://github.com/BruceDevices/firmware/pull/84.
 
 List of supported commands:
 ```
@@ -14,7 +14,7 @@ Most of these commands are compatible with the [Flipper Zero CLI](https://docs.f
 - via the terminal/a bash script: `echo "say My name is Bruce" | busybox microcom -s 115200 /dev/ttyACM0  -t 1000`
 - via a [python script](https://github.com/wh00hw/pyFlipper)
 - from a smartphone using [SerialManager](https://github.com/delletenebre/SerialManager2) or [Serial USB Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_usb_terminal)
-- via the [WebUI](https://github.com/pr3y/Bruce/wiki/Others#webui) ["SerialCmd" button](https://github.com/pr3y/Bruce/pull/134)
+- via the [WebUI](https://github.com/BruceDevices/firmware/wiki/Others#webui) ["SerialCmd" button](https://github.com/BruceDevices/firmware/pull/134)
 - after starting the WebUI, with `curl -XPOST "http://bruce.local/cm" -d "cmnd=say My name is Bruce"`
 
 Serial connection settings:

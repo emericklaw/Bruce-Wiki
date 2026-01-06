@@ -40,7 +40,7 @@
 
 ## Replay Payloads Like Flipper!
 
-To access `.ir` files, visit: [Infrared Payloads](https://github.com/pr3y/Bruce/tree/main/sd_files/infrared).
+To access `.ir` files, visit: [Infrared Payloads](https://github.com/BruceDevices/firmware/tree/main/sd_files/infrared).
 
 https://github.com/Lucaslhm/Flipper-IRDB also has so many payloads you can use
 
@@ -48,5 +48,5 @@ https://github.com/Lucaslhm/Flipper-IRDB also has so many payloads you can use
 
 1. **Custom IR App**: Select commands individually from the "IR" menu.
 2. **SDCard/LittleFS File Manager**: Access under the "Others" menu (sends all commands).
-3. **WebUI**: Click the [antenna button](https://github.com/pr3y/Bruce/pull/124) next to the file (sends all commands).
-4. **Serial Command**: For example, use `ir tx_from_file AC_LG_SX122CL_off.ir`. For further details, refer to the [Serial Command Guide](https://github.com/pr3y/Bruce/wiki/Serial) (sends all commands).
+3. **WebUI**: Click the [antenna button](https://github.com/BruceDevices/firmware/pull/124) next to the file (sends all commands).
+4. **Serial Command**: For example, use `ir tx_from_file AC_LG_SX122CL_off.ir`. For further details, refer to the [Serial Command Guide](https://github.com/BruceDevices/firmware/wiki/Serial) (sends all commands).

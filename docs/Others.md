@@ -22,8 +22,8 @@ You can then select which payload that will be sent when the Cardputer is connec
 Other methods to run badusb scripts:
 
 1. via the SDCard/LittleFS file manager in the "Others" menu (select a `.txt` file)
-2. remotely via the WebUI, click on the [antenna-like button next to the file](https://github.com/pr3y/Bruce/pull/124)
-3. via a [serial cmd](https://github.com/pr3y/Bruce/wiki/Serial) like `badusb run_from_file HelloWorld.txt`
+2. remotely via the WebUI, click on the [antenna-like button next to the file](https://github.com/BruceDevices/firmware/pull/124)
+3. via a [serial cmd](https://github.com/BruceDevices/firmware/wiki/Serial) like `badusb run_from_file HelloWorld.txt`
 
 ### Using Bad USB on StickCs and Core/Core2 devices
 You will need to use a CH9329 module such as [this ](https://pt.aliexpress.com/item/1005006680094576.html) or [this ](https://pt.aliexpress.com/item/1005007031564072.html) to run the Bad USB in your device, wiring it into the Grove connector like this:
@@ -49,7 +49,7 @@ base64 -d <<< "your_base64_public_key"|tee pub.key
 USB Mouse clicker that you can control the delay between the clicks, this is usually used to cheat in some clicker games.
 
 ## Interpreter
-Head over to the [Interpreter Section](https://github.com/pr3y/Bruce/wiki/Interpreter).
+Head over to the [Interpreter Section](https://github.com/BruceDevices/firmware/wiki/Interpreter).
 
 ## QRCodes
 You can display QR codes for the Bruce AP, or any given string.

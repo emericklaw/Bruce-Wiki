@@ -14,8 +14,8 @@
 
 First you need to clone the repository and build Bruce from sources. You will find the documentation here:
 1. [optional] but recommended: work from a [Python virtualenv](https://github.com/pyenv/pyenv-virtualenv)
-2. [build your firmware](https://github.com/pr3y/Bruce/wiki/Building-from-source)
-3. [install your build](https://github.com/pr3y/Bruce/wiki/Installing)
+2. [build your firmware](https://github.com/BruceDevices/firmware/wiki/Building-from-source)
+3. [install your build](https://github.com/BruceDevices/firmware/wiki/Installing)
 
 ## Bruce structure
 

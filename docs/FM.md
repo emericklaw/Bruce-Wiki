@@ -1,6 +1,6 @@
 Play on `76-108 MHz` frequencies with a Si4713 module.
 
-Feature added in https://github.com/pr3y/Bruce/pull/195
+Feature added in https://github.com/BruceDevices/firmware/pull/195
 
 ## :radio: Supported Modules
 It needs to a Si4713. Those modules are supported for now:
