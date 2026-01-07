@@ -81,6 +81,14 @@ Once in the editor you can use a lot of the common text editing shortcuts availa
     CTRL+/  Adds/removes comments for the selected line(s)
     TAB/SHIFT+TAB  Increases/decreases intending
 
+### Settings
+
+![Settings](webui-settings.png)
+
+* Change WebUI Credentials - set the username and password to login to the WebUI
+* Navigating Overlay - toggles the 'Navigating...' text over the Navigator when the screen is being updated
+* Reboot - reboots the device
+
 ## Automatically Starting WebUI
 
 You can start the WebUI every time the device boots.
