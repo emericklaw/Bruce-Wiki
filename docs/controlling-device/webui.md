@@ -44,7 +44,7 @@ To access the Navigator click the `Navigator` button at the top of the WebUI.
 The buttons on the right can be used to control the device.
 
 | Action | Icon |
-| - | - |
+| --- | --- |
 | Navigation | :octicons-triangle-up-24: :octicons-triangle-down-24: :octicons-triangle-left-24: :octicons-triangle-right-24: |
 | Enter/Select | :fontawesome-solid-circle: |
 | Long Press | :material-circle-double: |
@@ -57,7 +57,7 @@ The buttons on the right can be used to control the device.
 You can use your PC keyboard for navigating instead of the on-screen buttons.
 
 | Action | Keys |
-| - | - |
+| --- | --- |
 | Navigating | Arrow Keys |
 | Back | Backspace |
 | OK | Enter |
