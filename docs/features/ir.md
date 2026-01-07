@@ -47,9 +47,9 @@ Various Infrared functions including TV-B-Gone, sending and receiving IR command
 
 ## Features
 
- * [x] **TV-B-Gone**: Sends infrared signals to turn off various screens.
- * [x] **Custom IR**: Allows sending of custom IR codes from files stored in LittleFS or on an SD card.
- * [x] **IR Read**: Capable of reading and decoding incoming IR signals.
+ * :white_check_mark: **TV-B-Gone**: Sends infrared signals to turn off various screens.
+ * :white_check_mark: **Custom IR**: Allows sending of custom IR codes from files stored in LittleFS or on an SD card.
+ * :white_check_mark: **IR Read**: Capable of reading and decoding incoming IR signals.
 
 ---
 
