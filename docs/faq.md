@@ -7,7 +7,7 @@ Use the [WebUI](controlling-device/serial.md).
 
 ## Default passwords?
 
-For AP mode the WiFi network the password is `brucenet`.
+For AP mode the WiFi network password is `brucenet`.
 
 For the WebUI username is `admin` and password is `bruce` - these can be changed from the [WebUI Settings](controlling-device/webui.md#settings).
 
