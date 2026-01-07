@@ -13,6 +13,7 @@ Once you have connected your device to your WiFi or connected to the devices AP 
 
 ![WebUI](webui.png)
 
+
 ## Features
 
 * View the devices screen using the [Navigator](#navigator)
@@ -34,7 +35,6 @@ Once you have connected your device to your WiFi or connected to the devices AP 
 To access type the hostname `http://bruce.local` or the IP address displayed on screen into your web browser.
 
 
-
 ### Navigator
 
 To access the Navigator click the `Navigator` button at the top of the WebUI.
@@ -51,6 +51,7 @@ The buttons on the right can be used to control the device.
 | Back/Escape | :octicons-undo-24: |
 | Previous/Next | :material-arrow-collapse-down: :material-arrow-collapse-up: |
 
+
 #### Navigating with Keyboard
 
 You can use your PC keyboard for navigating instead of the on-screen buttons.
@@ -66,11 +67,13 @@ You can use your PC keyboard for navigating instead of the on-screen buttons.
 | Close Navigator | Escape |
 | Reload Screen | R |
 
+
 ### Editor
 
 Clicking on text based file will load the editor.
 
 ![Editor](webui-editor.png)
+
 
 #### Keyboard Shortcuts
 
@@ -81,6 +84,7 @@ Once in the editor you can use a lot of the common text editing shortcuts availa
 * **CTRL+/**  Adds/removes comments for the selected line(s)
 * **TAB/SHIFT+TAB**  Increases/decreases intending
 
+
 ### Settings
 
 ![Settings](webui-settings.png)
@@ -88,6 +92,7 @@ Once in the editor you can use a lot of the common text editing shortcuts availa
 * **Change WebUI Credentials** - set the username and password to login to the WebUI
 * **Navigating Overlay** - toggles the 'Navigating...' text over the Navigator when the screen is being updated
 * **Reboot** - reboots the device
+
 
 ## Automatically Starting WebUI
 
