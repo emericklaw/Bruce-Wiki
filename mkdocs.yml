@@ -28,6 +28,13 @@ markdown_extensions:
 
 plugins:
   - search
+  - tags:
+      shadow_tags_prefix: _
+      shadow: false
+      shadow_tags:
+        - Draft
+        - Internal
+        - TODO
 
 extra_css:
   - stylesheets/extra.css
