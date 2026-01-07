@@ -1,0 +1,20 @@
+@media screen {
+  [data-md-color-scheme=slate][data-md-color-primary=bruce] {
+    --md-typeset-color:#ffffff;
+    --md-default-fg-color--light:#ffffff;
+  }
+}
+[data-md-color-accent=bruce] {
+  --md-accent-fg-color:#9B51E0;
+  --md-accent-fg-color--transparent:#7c4dff1a;
+  --md-accent-bg-color:#fff;
+  --md-accent-bg-color--light:#ffffffb3;
+}
+[data-md-color-primary=bruce] {
+  --md-primary-fg-color:#9B51E0;
+  --md-primary-fg-color--light:#9574cd;
+  --md-primary-fg-color--dark:#673ab6;
+  --md-primary-bg-color:#fff;
+  --md-primary-bg-color--light:#ffffffb3;
+  --md-default-bg-color: rgb(10, 10, 10);
+}

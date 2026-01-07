@@ -1,4 +1,4 @@
-site_name: Bruce Wiki
+site_name: Bruce  Wiki
 repo_url: https://github.com/BruceDevices/firmware
 repo_name: GitHub
 
@@ -9,13 +9,10 @@ use_directory_urls: true
 
 theme:
   name: material
-
-theme:
-  name: material
   palette:
     - scheme: slate
-      primary: deep purple
-      accent: purple
+      primary: bruce
+      accent: bruce
 
 extra:
   generator: false
@@ -28,3 +25,17 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
