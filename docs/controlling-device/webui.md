@@ -31,7 +31,7 @@ Once you have connected your device to your WiFi or connected to the devices AP 
 * Edit text based files using the [Editor](#editor)
 * Run certian files like .ir/.sub/.js on the device
 * Execute serial commands
- 
+
 To access type the hostname `http://bruce.local` or the IP address displayed on screen into your web browser.
 
 
@@ -106,6 +106,6 @@ More information on the serial commands can be found [here](serial.md).
 You can start the WebUI every time the device boots.
 
 * Activate WiFi at startup
-   * Goto Config -> Startup WiFi -> Enable
+    * Goto Config -> Startup WiFi -> Enable
 * Set WebUI as startup app
-   * Goto Config -> Startup App -> WebUI
+    * Goto Config -> Startup App -> WebUI

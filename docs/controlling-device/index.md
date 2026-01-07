@@ -1,6 +1,6 @@
 ---
 tags:
- - _TODO
+ -  _TODO
 todo: Document other device navigation methods
       Explain more about the interface
 ---
@@ -26,7 +26,9 @@ The common methods include:
     * Esc - back
     * [Keyboard Shortcuts](keyboard-shortcuts.md)
 
+
 ## Main Menu
+
 ![Main Menu](main-menu.png)
 
 At the top is the status bar.
@@ -34,5 +36,5 @@ At the top is the status bar.
 This shows:
 
 * The time (if available)
-* Various status icons 
+* Various status icons
 * Battery level and charging indication (if available)

@@ -20,13 +20,13 @@ A sample environment for the [esp32-s3-devkitc-1 board](https://docs.espressif.c
 ```
 .
 ├── platformio.ini
-├── boards
-│   ├── _boards_json
-│   │   └── [board].json
-│   └── [board]
-│       ├── interface.cpp
-│       ├── pins_arduino.h
-│       └── [board].ini
+└── boards
+    ├── _boards_json
+    │   └── [board].json
+    └── [board]
+        ├── interface.cpp
+        ├── pins_arduino.h
+        └── [board].ini
 ...
 ```
 
@@ -39,24 +39,29 @@ Add entry to `default_envs` section.
 
 
 ### boards/_boards_json/\[board].json
+
 This is the board config. Look at other boards for whats needed.
 
 Here is an offical example and what we are actually using [here](https://github.com/platformio/platform-espressif32/blob/master/boards/esp32-s3-devkitc-1.json)
 
 
 ### boards/pinouts/pins_arduino.h
+
 This is where you put the flags and pinouts to the board. Look at other boards for whats needed.
 
 Here is an official example and what we are actually using [here](https://github.com/espressif/arduino-esp32/blob/master/variants/esp32s3/pins_arduino.h)
 
 
 ### boards/\[board]/interface.cpp
+
 This is where board specific setup code is added.
 
 
 ### boards/\[board].ini
+
 This is the platformio config for the device. Look at other boards for whats needed.
 
 
 ### .github/workflows/buil_parallel.yml
+
 This is the last file that should be changed to add a new device build, you should just add a new line with the environment you choose before and set the bootloader address.

@@ -1,16 +1,17 @@
 # Keyboard Shortcuts
+
 > **PLEASE NOTE:** Only available on Cardputer
 
 ## Usage
 
 When you are on the main menu, you can use the following keyboard shortcuts:
 
-- `i` : Navigate to IR codes.
-- `r` or `s` : Navigate to RF codes.
-- `b` : Navigate to BadUSB.
-- `w` : Navigate to WebUI.
-- `f` : Start the file manager on SD card (if present).
-- `l` : Start the file manager on LittleFS.
+* `i` : Navigate to IR codes.
+* `r` or `s` : Navigate to RF codes.
+* `b` : Navigate to BadUSB.
+* `w` : Navigate to WebUI.
+* `f` : Start the file manager on SD card (if present).
+* `l` : Start the file manager on LittleFS.
 
 > While not on the main menu these shortcuts are disabled.
 
@@ -23,7 +24,7 @@ You can customize these keys by using a `/shortcuts.json` file.
 The action string on the right can be any supported [serial command](serial.md).
 
 > Uppercase/lowercase letters are considered different and therefore can have different actions associated with them.
-> 
+>
 > Symbols are also supported.
 
 
@@ -42,5 +43,5 @@ The action string on the right can be any supported [serial command](serial.md).
     "t": "ir tx_from_file BruceIR/tv_telefunken_power.ir",
     "l": "ir tx_from_file BruceIR/desklamp_off.ir",
     "L": "ir tx_from_file BruceIR/desklamp_on.ir"
-} 
+}
 ```

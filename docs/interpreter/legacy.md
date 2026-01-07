@@ -1,6 +1,6 @@
 ---
 tags:
- - _TODO
+ -  _TODO
 todo: Formatting
       Needs updating with all recent JS changes by Matt (@emericklaw)
       Possible changes with the upcomming migration away from Duktape
@@ -20,17 +20,17 @@ For easier development, you can use [this bash script to upload code directly vi
 
 API Reference for Native Functions Accessible from JS:
 
- - [General](#general)
- - [Board info](#get-some-board-information)
- - [WiFi](#wifi-functions)
- - [TFT Display](#tft-display-functions)
- - [Keyboard](#keyboard-inputs)
- - [Storage](#storage-functions)
- - [Serial](#serial-functions)
- - [Audio](#audio-functions)
- - [IR](#ir-functions)
- - [Subghz](#subghzrf-functions)
- - [Badusb](#badusb-functions)
+* [General](#general)
+* [Board info](#get-some-board-information)
+* [WiFi](#wifi-functions)
+* [TFT Display](#tft-display-functions)
+* [Keyboard](#keyboard-inputs)
+* [Storage](#storage-functions)
+* [Serial](#serial-functions)
+* [Audio](#audio-functions)
+* [IR](#ir-functions)
+* [Subghz](#subghzrf-functions)
+* [Badusb](#badusb-functions)
 
 [New alternative Flipper-like API](https://github.com/Tawank/bruce-js-tooling/)
 
@@ -38,10 +38,10 @@ API Reference for Native Functions Accessible from JS:
 
 ### `load(script: string)`
 
-**Description**: Sets the script to be executed next when the current script ends. 
+**Description**: Sets the script to be executed next when the current script ends.
 
 **Parameters**:
-- `script` (string): The JavaScript code as a string to be loaded.
+* `script` (string): The JavaScript code as a string to be loaded.
 
 **Returns**: `void`
 
@@ -60,7 +60,7 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Pauses execution for the specified number of milliseconds.
 
 **Parameters**:
-- `ms` (number): The number of milliseconds to delay.
+* `ms` (number): The number of milliseconds to delay.
 
 **Returns**: `void`
 
@@ -71,8 +71,8 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Sets the digital value (HIGH or LOW) for a specified pin.
 
 **Parameters**:
-- `pin` (number): The pin number.
-- `value` (boolean): The value to write (true for HIGH, false for LOW).
+* `pin` (number): The pin number.
+* `value` (boolean): The value to write (true for HIGH, false for LOW).
 
 **Returns**: `void`
 
@@ -101,8 +101,8 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Configures the specified pin to behave as an input or an output.
 
 **Parameters**:
-- `pin` (number): The pin number.
-- `mode` (number): The mode to set (INPUT, OUTPUT, etc.).
+* `pin` (number): The pin number.
+* `mode` (number): The mode to set (INPUT, OUTPUT, etc.).
 
 **Returns**: `void`
 
@@ -138,9 +138,9 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Connects to the specified WiFi network (without opening any menu).
 
 **Parameters**:
-- `ssid` (string): Network name.
-- `timeout_in_seconds` (number): retry connecting. Defaults to 10 seconds if unspecified.
-- `pwd` (string): Network password (optional for open networks)
+* `ssid` (string): Network name.
+* `timeout_in_seconds` (number): retry connecting. Defaults to 10 seconds if unspecified.
+* `pwd` (string): Network password (optional for open networks)
 
 **Returns**: boolean. Returns `true` if connection was successful, `false` otherwise.
 
@@ -156,9 +156,9 @@ API Reference for Native Functions Accessible from JS:
 **Description**: scan for available WiFi networks. Also disconnect from current WiFi network to perform the scan.
 
 **Returns**: `object`: An object array with 3 properties:
-  - `SSID` (string): The network name.
-  - `encryptionType` (string): The network encryptionType. Possible values: `"UNKNOWN", "TKIP/WPA", "WEP","CCMP/WPA","NONE","AUTO"`
-  - `MAC` (string): The AP MAC address.
+    * `SSID` (string): The network name.
+    * `encryptionType` (string): The network encryptionType. Possible values: `"UNKNOWN", "TKIP/WPA", "WEP","CCMP/WPA","NONE","AUTO"`
+    * `MAC` (string): The AP MAC address.
 
 ---
 
@@ -168,16 +168,16 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Performs an HTTP GET request to the specified URL. Optionally includes headers.
 
 **Parameters**:
-- `url` (string): The URL to send the GET request to.
-- `headers` (string[]): An array of headers to include in the request. Headers should be provided as key-value pairs in the array. Example: `[
+* `url` (string): The URL to send the GET request to.
+* `headers` (string[]): An array of headers to include in the request. Headers should be provided as key-value pairs in the array. Example: `[
     "Content-Type", "application/json",
     "Authorization", "Bearer your_token_here",
     "Accept", "application/json"
 ]`
 
 **Returns**: `object`: An object with two properties:
-  - `response` (number): The HTTP response code.
-  - `body` (string): The response body.
+    * `response` (number): The HTTP response code.
+    * `body` (string): The response body.
 
 ---
 
@@ -188,9 +188,9 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Creates a color from the given RGB values.
 
 **Parameters**:
-- `r` (number): The red component (0-255).
-- `g` (number): The green component (0-255).
-- `b` (number): The blue component (0-255).
+* `r` (number): The red component (0-255).
+* `g` (number): The green component (0-255).
+* `b` (number): The blue component (0-255).
 
 **Returns**: `number`: The color value in 16-bit RGB format.
 
@@ -201,7 +201,7 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Sets the text color for drawing operations.
 
 **Parameters**:
-- `color` (number): The color value in 16-bit RGB format.
+* `color` (number): The color value in 16-bit RGB format.
 
 **Returns**: `void`
 
@@ -212,7 +212,7 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Sets the text size for drawing operations.
 
 **Parameters**:
-- `size` (number): The text size multiplier.
+* `size` (number): The text size multiplier.
 
 **Returns**: `void`
 
@@ -223,11 +223,11 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Draws a rectangle with the specified parameters.
 
 **Parameters**:
-- `x` (number): The x-coordinate of the top-left corner.
-- `y` (number): The y-coordinate of the top-left corner.
-- `width` (number): The width of the rectangle.
-- `height` (number): The height of the rectangle.
-- `color` (number): The color value in 16-bit RGB format.
+* `x` (number): The x-coordinate of the top-left corner.
+* `y` (number): The y-coordinate of the top-left corner.
+* `width` (number): The width of the rectangle.
+* `height` (number): The height of the rectangle.
+* `color` (number): The color value in 16-bit RGB format.
 
 **Returns**: `void`
 
@@ -238,11 +238,11 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Draws a filled rectangle with the specified parameters.
 
 **Parameters**:
-- `x` (number): The x-coordinate of the top-left corner.
-- `y` (number): The y-coordinate of the top-left corner.
-- `width` (number): The width of the rectangle.
-- `height` (number): The height of the rectangle.
-- `color` (number): The color value in 16-bit RGB format.
+* `x` (number): The x-coordinate of the top-left corner.
+* `y` (number): The y-coordinate of the top-left corner.
+* `width` (number): The width of the rectangle.
+* `height` (number): The height of the rectangle.
+* `color` (number): The color value in 16-bit RGB format.
 
 **Returns**: `void`
 
@@ -253,9 +253,9 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Draws the specified text at the given coordinates.
 
 **Parameters**:
-- `text` (string): The text to draw.
-- `x` (number): The x-coordinate where the text starts.
-- `y` (number): The y-coordinate where the text starts.
+* `text` (string): The text to draw.
+* `x` (number): The x-coordinate where the text starts.
+* `y` (number): The y-coordinate where the text starts.
 
 **Returns**: `void`
 
@@ -283,11 +283,11 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `x` (number): The x-coordinate of the starting point.
-- `y` (number): The y-coordinate of the starting point.
-- `x2` (number): The x-coordinate of the final point.
-- `y2` (number): The y-coordinate of the final point.
-- `color` (number): The color value in 16-bit RGB format.
+* `x` (number): The x-coordinate of the starting point.
+* `y` (number): The y-coordinate of the starting point.
+* `x2` (number): The x-coordinate of the final point.
+* `y2` (number): The y-coordinate of the final point.
+* `color` (number): The color value in 16-bit RGB format.
 
 **Returns**: `void`
 
@@ -299,9 +299,9 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `x` (number): The x-coordinate of the pixel.
-- `y` (number): The y-coordinate of the pixel.
-- `color` (number): The color value in 16-bit RGB format.
+* `x` (number): The x-coordinate of the pixel.
+* `y` (number): The y-coordinate of the pixel.
+* `color` (number): The color value in 16-bit RGB format.
 
 **Returns**: `void`
 
@@ -312,7 +312,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `color` (number): The color value in 16-bit RGB format.
+* `color` (number): The color value in 16-bit RGB format.
 
 **Returns**: `void`
 
@@ -324,7 +324,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `msg` (string): The message text.
+* `msg` (string): The message text.
 
 **Returns**: `void`
 
@@ -336,7 +336,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `msg` (string): The message text.
+* `msg` (string): The message text.
 
 **Returns**: `void`
 
@@ -348,7 +348,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `path` (string): Root path (optional, defaults to SDcard root if unspecified)
+* `path` (string): Root path (optional, defaults to SDcard root if unspecified)
 
 **Returns**: `string`. Selected file full path, or empty string if cancelled.
 
@@ -360,7 +360,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `choices`: an all the choices to show.  Choices should be provided as key-value pairs in the array. Example: `[ "choice1", "return_val1", "choice2", "return_val2", ...]`
+* `choices`: an all the choices to show.  Choices should be provided as key-value pairs in the array. Example: `[ "choice1", "return_val1", "choice2", "return_val2", ...]`
 
 **Returns**: `string`. Selected choice value, or empty string if cancelled.
 
@@ -371,7 +371,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `path` (string): file pathname to view.
+* `path` (string): file pathname to view.
 
 **Returns**: `void`
 
@@ -386,9 +386,9 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `initval` (string): initial text field value (optional).
-- `maxlen` (number): max input string lenght (optional).
-- `title` (string): dialog title (optional).
+* `initval` (string): initial text field value (optional).
+* `maxlen` (number): max input string lenght (optional).
+* `title` (string): dialog title (optional).
 
 **Returns**: `string`. Typed string, or empty string if cancelled.
 
@@ -405,12 +405,14 @@ API Reference for Native Functions Accessible from JS:
 ---
 
 ### `getPrevPress()`
+
 **Description**: Return the current state of 'Previous' button;
 
 **Returns**: `boolean`: Returns `true` if pressed and `false` if not pressed
 
 ---
 ### `getSelPress()`
+
 **Description**: Return the current state of 'Select' button;
 
 **Returns**: `boolean`: Returns `true` if pressed and `false` if not pressed
@@ -418,12 +420,14 @@ API Reference for Native Functions Accessible from JS:
 ---
 
 ### `getNextPress()`
+
 **Description**: Return the current state of 'Next' button;
 
 **Returns**: `boolean`: Returns `true` if pressed and `false` if not pressed
 
 ---
 ### `getKeysPressed()`
+
 **Restriction**: Works only in Cardputer
 
 **Description**: Returns the current state of the keys pressed on the M5Cardputer.
@@ -441,7 +445,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `filename` (string): file pathname to read.
+* `filename` (string): file pathname to read.
 
 **Returns**: `string`. File contents, or empty string if not found or any other error.
 
@@ -454,8 +458,8 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `filename` (string): path of the file to write.
-- `data` (string): string to write.
+* `filename` (string): path of the file to write.
+* `data` (string): string to write.
 
 **Returns**: `boolean`: Returns `true` if successfull or `false` if failed
 
@@ -468,7 +472,7 @@ API Reference for Native Functions Accessible from JS:
 **Description**: Prints the given message to the Serial monitor.
 
 **Parameters**:
-- `message` (string): The message to print.
+* `message` (string): The message to print.
 
 **Returns**: `void`
 
@@ -479,7 +483,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `timeout_in_ms` (number): timeout in milli-seconds. Defaults to 10s if unspecified.
+* `timeout_in_ms` (number): timeout in milli-seconds. Defaults to 10s if unspecified.
 
 **Returns**: `string`: Returns the line received
 
@@ -491,7 +495,7 @@ API Reference for Native Functions Accessible from JS:
 
 **Parameters**:
 
-- `cmd` (string): serial command to execute.
+* `cmd` (string): serial command to execute.
 
 **Returns**: `boolean`: Returns `true` if successfull or `false` if command failed
 

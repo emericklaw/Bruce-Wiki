@@ -18,8 +18,8 @@ Use the [WebUI](../controlling-device/webui.md).
 
 When uploading scripts to Bruce, keep in mind:
 
-- **Only JavaScript (`.js`) files can be uploaded.**
-- If you have **TypeScript (`.ts`)** files, you must first [**compile it to JavaScript** (`.js`)](../interpreter/typescript.md).
+* **Only JavaScript (`.js`) files can be uploaded.**
+* If you have **TypeScript (`.ts`)** files, you must first [**compile it to JavaScript** (`.js`)](../interpreter/typescript.md).
 
 ## Creating Scripts
 

@@ -1,6 +1,6 @@
 ---
 tags:
- - _TODO
+ -  _TODO
 todo: Formatting
       Needs updating with all recent JS changes by Matt (@emericklaw)
       Possible changes with the upcomming migration away from Duktape
@@ -23,13 +23,13 @@ Or this [TypeScript developement SDK](typescript.md) works in linux and windows.
 
 ### Important: JavaScript Compatibility
 
-- ❌ **No modern JavaScript features** – Use only ES5 syntax:
-  - ❌ **No** `let` (use `var` instead).
-  - ❌ **No** `for...of` loops (use traditional `for` loops with indexes).
-  - ❌ **No** Arrow functions `() => {}` (use `function` instead).
-  - ❌ **No** `import ir from 'ir'` import syntax use `const ir = require('ir');` instead.
-  - ❌ **No** External npm module imports.
-  - ❌ **No** `Object.entries()`, `Promise`, `async/await`, `setInterval`, `setTimeout` (for now).
+* ❌ **No modern JavaScript features** – Use only ES5 syntax:
+    * ❌ **No** `let` (use `var` instead).
+    * ❌ **No** `for...of` loops (use traditional `for` loops with indexes).
+    * ❌ **No** Arrow functions `() => {}` (use `function` instead).
+    * ❌ **No** `import ir from 'ir'` import syntax use `const ir = require('ir');` instead.
+    * ❌ **No** External npm module imports.
+    * ❌ **No** `Object.entries()`, `Promise`, `async/await`, `setInterval`, `setTimeout` (for now).
 
 If you want modern JS features as well as TypeScript support you can go [here](typescript.md)
 
@@ -37,33 +37,31 @@ If you want modern JS features as well as TypeScript support you can go [here](t
 
 When uploading scripts to Bruce, keep in mind:
 
-- **Only JavaScript (`.js`) files can be uploaded.**
-- If you have **TypeScript (`.ts`)** files, you must first [**compile it to JavaScript** (`.js`)](typescript.md).
+* **Only JavaScript (`.js`) files can be uploaded.**
+* If you have **TypeScript (`.ts`)** files, you must first [**compile it to JavaScript** (`.js`)](typescript.md).
 
 ## Documentation
 
 ## Modules
 
-| Module                          | Description                                           |
+| Module | Description |
 | ------------------------------- | ----------------------------------------------------- |
-| [globals](#globalsmd)           | Global variables and functions available in bruce js. |
-| [audio](#audiomd)               | Controls the audio.                                   |
-| [badusb](#badusbmd)             | Simulates USB keyboard input.                         |
-| [device](#devicemd)             | Show device information.                              |
-| [dialog](#dialogmd)             | Displays dialog messages and user interactions.       |
-| [display](#displaymd)           | Controls the TFT Display                              |
-| [gpio](#gpiomd)                 | GPIO (General Purpose Input/Output) ports             |
-| [ir](#irmd)                     | Interacting with infrared (IR) signals.               |
-| [keyboard](#keyboardmd)         | Access the keyboard input.                            |
-| [notification](#notificationmd) | Controls the notification LED.                        |
-| [serial](#serialmd)             | Serial communication.                                 |
-| [storage](#storagemd)           | File storage operations.                              |
-| [subghz](#subghzmd)             | Sub-GHz communication.                                |
-| [wifi](#wifimd)                 | Wi-Fi connection and HTTP requests.                   |
+| [globals](#globals) | Global variables and functions available in bruce js. |
+| [audio](#audiomd) | Controls the audio. |
+| [badusb](#badusbmd) | Simulates USB keyboard input. |
+| [device](#devicemd) | Show device information. |
+| [dialog](#dialogmd) | Displays dialog messages and user interactions. |
+| [display](#displaymd) | Controls the TFT Display |
+| [gpio](#gpiomd) | GPIO (General Purpose Input/Output) ports |
+| [ir](#irmd) | Interacting with infrared (IR) signals. |
+| [keyboard](#keyboardmd) | Access the keyboard input. |
+| [notification](#notificationmd) | Controls the notification LED. |
+| [serial](#serialmd) | Serial communication. |
+| [storage](#storagemd) | File storage operations. |
+| [subghz](#subghzmd) | Sub-GHz communication. |
+| [wifi](#wifimd) | Wi-Fi connection and HTTP requests. |
 
-<a name="globalsmd"></a>
-
-# globals
+## globals
 
 Global variables and functions available in bruce js.
 
@@ -85,23 +83,23 @@ println(__dirname); // prints current dirname
 <!-- index-start -->
 ## globals functions
 
-- [Path](#path)
-- [FileSystem](#filesystem)
-- [BRUCE_VERSION](#bruce_version)
-- [BRUCE_PRICOLOR](#bruce_pricolor)
-- [BRUCE_SECCOLOR](#bruce_seccolor)
-- [BRUCE_BGCOLOR](#bruce_bgcolor)
-- [now()](#now)
-- [delay()](#delay)
-- [parse_int()](#parse_int)
-- [to_string()](#to_string)
-- [to_hex_string()](#to_hex_string)
-- [to_lower_case()](#to_lower_case)
-- [to_upper_case()](#to_upper_case)
-- [random()](#random)
-- [println()](#println)
-- [require()](#require)
-- [assert()](#assert)
+* [Path](#path)
+* [FileSystem](#filesystem)
+* [BRUCE_VERSION](#bruce_version)
+* [BRUCE_PRICOLOR](#bruce_pricolor)
+* [BRUCE_SECCOLOR](#bruce_seccolor)
+* [BRUCE_BGCOLOR](#bruce_bgcolor)
+* [now()](#now)
+* [delay()](#delay)
+* [parse_int()](#parse_int)
+* [to_string()](#to_string)
+* [to_hex_string()](#to_hex_string)
+* [to_lower_case()](#to_lower_case)
+* [to_upper_case()](#to_upper_case)
+* [random()](#random)
+* [println()](#println)
+* [require()](#require)
+* [assert()](#assert)
 <!-- index-end -->
 
 ## Path
@@ -117,10 +115,10 @@ dialog.pickFile({ fs: "user", path: "/" });
 
 ### Properties
 
-| Property                   | Type                        | Description                                      |
+| Property | Type | Description |
 | -------------------------- | --------------------------- | ------------------------------------------------ |
-| <a id="fs"></a> `fs`       | [`FileSystem`](#filesystem) | The storage medium where the file is located     |
-| <a id="path-1"></a> `path` | `string`                    | The file path within the selected storage medium |
+| <a id="fs"></a> `fs` | [`FileSystem`](#filesystem) | The storage medium where the file is located |
+| <a id="path-1"></a> `path` | `string` | The file path within the selected storage medium |
 
 ---
 
@@ -132,9 +130,9 @@ type FileSystem = "sd" | "littlefs" | null;
 
 Represents the storage medium where a file is located.
 
-- `'sd'` - File stored on SD card.
-- `'littlefs'` - File stored on LittleFS.
-- `null` - Automatically choose between SD card (if available) and LittleFS as a fallback.
+* `'sd'` - File stored on SD card.
+* `'littlefs'` - File stored on LittleFS.
+* `null` - Automatically choose between SD card (if available) and LittleFS as a fallback.
 
 ---
 
@@ -224,9 +222,9 @@ Pauses execution for the specified number of milliseconds
 
 ### Parameters
 
-| Parameter | Type     | Description                         |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------------------------- |
-| `ms`      | `number` | The number of milliseconds to delay |
+| `ms` | `number` | The number of milliseconds to delay |
 
 ### Returns
 
@@ -244,9 +242,9 @@ Converts a string to a number
 
 ### Parameters
 
-| Parameter | Type     | Description                       |
+| Parameter | Type | Description |
 | --------- | -------- | --------------------------------- |
-| `text`    | `string` | The string to convert to a number |
+| `text` | `string` | The string to convert to a number |
 
 ### Returns
 
@@ -264,9 +262,9 @@ Converts a value to a string
 
 ### Parameters
 
-| Parameter | Type  | Description                      |
+| Parameter | Type | Description |
 | --------- | ----- | -------------------------------- |
-| `value`   | `any` | The value to convert to a string |
+| `value` | `any` | The value to convert to a string |
 
 ### Returns
 
@@ -284,9 +282,9 @@ Converts a hex string to a number
 
 ### Parameters
 
-| Parameter | Type     | Description                           |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------------------------- |
-| `text`    | `string` | The hex string to convert to a number |
+| `text` | `string` | The hex string to convert to a number |
 
 ### Returns
 
@@ -304,9 +302,9 @@ Converts a string to a number
 
 ### Parameters
 
-| Parameter | Type     | Description                       |
+| Parameter | Type | Description |
 | --------- | -------- | --------------------------------- |
-| `text`    | `string` | The string to convert to a number |
+| `text` | `string` | The string to convert to a number |
 
 ### Returns
 
@@ -324,9 +322,9 @@ Converts a string to a number
 
 ### Parameters
 
-| Parameter | Type     | Description                       |
+| Parameter | Type | Description |
 | --------- | -------- | --------------------------------- |
-| `text`    | `string` | The string to convert to a number |
+| `text` | `string` | The string to convert to a number |
 
 ### Returns
 
@@ -346,10 +344,10 @@ Returns a pseudo-random number
 
 #### Parameters
 
-| Parameter | Type     | Description                                           |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------------------------------------------- |
-| `min`     | `number` | Lower bound of the random value, inclusive (optional) |
-| `max`     | `number` | Upper bound of the random value, exclusive            |
+| `min` | `number` | Lower bound of the random value, inclusive (optional) |
+| `max` | `number` | Upper bound of the random value, exclusive |
 
 #### Returns
 
@@ -365,9 +363,9 @@ Returns a pseudo-random number
 
 #### Parameters
 
-| Parameter | Type     | Description                                |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------------------------------ |
-| `max`     | `number` | Upper bound of the random value, exclusive |
+| `max` | `number` | Upper bound of the random value, exclusive |
 
 #### Returns
 
@@ -385,7 +383,7 @@ Prints text to serial monitor and display. Alias to [display.println](#displaypr
 
 ### Parameters
 
-| Parameter | Type    | Description   |
+| Parameter | Type | Description |
 | --------- | ------- | ------------- |
 | ...`args` | `any`[] | Text content. |
 
@@ -412,9 +410,9 @@ dialog.message("Test.");
 
 ### Parameters
 
-| Parameter | Type     | Description                    |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------------------ |
-| `module`  | `string` | The name of the module to load |
+| `module` | `string` | The name of the module to load |
 
 ### Returns
 
@@ -438,10 +436,10 @@ assert(2 + 2 === 5); // Throws an error
 
 ### Parameters
 
-| Parameter   | Type      | Description                             |
+| Parameter | Type | Description |
 | ----------- | --------- | --------------------------------------- |
-| `assertion` | `boolean` | Any boolean expression                  |
-| `message`?  | `string`  | The Error message if assertion is false |
+| `assertion` | `boolean` | Any boolean expression |
+| `message`? | `string` | The Error message if assertion is false |
 
 ### Returns
 
@@ -465,8 +463,8 @@ audio.tone(988, 2000); // Beeps buzzer for 2 seconds
 <!-- index-start -->
 ## audio functions
 
-- [audio.playFile()](#audioplayfile)
-- [audio.tone()](#audiotone)
+* [audio.playFile()](#audioplayfile)
+* [audio.tone()](#audiotone)
 <!-- index-end -->
 
 ## audio.playFile()
@@ -479,7 +477,7 @@ Plays an audio file from storage.
 
 ### Parameters
 
-| Parameter  | Type     | Description                                      |
+| Parameter | Type | Description |
 | ---------- | -------- | ------------------------------------------------ |
 | `filename` | `string` | The path to the audio file (e.g., "/sound.wav"). |
 
@@ -503,10 +501,10 @@ Plays a tone at the specified frequency for a given duration.
 
 ### Parameters
 
-| Parameter      | Type      | Description                                                               |
+| Parameter | Type | Description |
 | -------------- | --------- | ------------------------------------------------------------------------- |
-| `frequency`    | `number`  | Frequency in Hz.                                                          |
-| `durationMs`   | `number`  | Duration in milliseconds.                                                 |
+| `frequency` | `number` | Frequency in Hz. |
+| `durationMs` | `number` | Duration in milliseconds. |
 | `nonBlocking`? | `boolean` | If true, the function will not play the tone if it would block execution. |
 
 ### Returns
@@ -534,15 +532,15 @@ badusb.println("Hello, world!"); // Types and presses Enter
 <!-- index-start -->
 ## badusb functions
 
-- [badusb.setup()](#badusbsetup)
-- [badusb.press()](#badusbpress)
-- [badusb.pressRaw()](#badusbpressraw)
-- [badusb.hold()](#badusbhold)
-- [badusb.release()](#badusbrelease)
-- [badusb.releaseAll()](#badusbreleaseall)
-- [badusb.print()](#badusbprint)
-- [badusb.println()](#badusbprintln)
-- [badusb.runFile()](#badusbrunfile)
+* [badusb.setup()](#badusbsetup)
+* [badusb.press()](#badusbpress)
+* [badusb.pressRaw()](#badusbpressraw)
+* [badusb.hold()](#badusbhold)
+* [badusb.release()](#badusbrelease)
+* [badusb.releaseAll()](#badusbreleaseall)
+* [badusb.print()](#badusbprint)
+* [badusb.println()](#badusbprintln)
+* [badusb.runFile()](#badusbrunfile)
 <!-- index-end -->
 
 ## badusb.setup()
@@ -569,7 +567,7 @@ Simulates pressing a key using a keycode.
 
 ### Parameters
 
-| Parameter | Type     | Description                      |
+| Parameter | Type | Description |
 | --------- | -------- | -------------------------------- |
 | `keycode` | `number` | HID keycode of the key to press. |
 
@@ -589,7 +587,7 @@ Simulates pressing a key using a raw HID key value.
 
 ### Parameters
 
-| Parameter | Type     | Description        |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------ |
 | `hid_key` | `number` | Raw HID key value. |
 
@@ -609,7 +607,7 @@ Simulates holding down a key.
 
 ### Parameters
 
-| Parameter | Type     | Description                     |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------------------- |
 | `keycode` | `number` | HID keycode of the key to hold. |
 
@@ -629,7 +627,7 @@ Releases a previously pressed key.
 
 ### Parameters
 
-| Parameter | Type     | Description                        |
+| Parameter | Type | Description |
 | --------- | -------- | ---------------------------------- |
 | `keycode` | `number` | HID keycode of the key to release. |
 
@@ -663,7 +661,7 @@ Types a string as keyboard input.
 
 ### Parameters
 
-| Parameter | Type     | Description       |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------- |
 | `message` | `string` | The text to type. |
 
@@ -683,7 +681,7 @@ Types a string followed by an "Enter" key press.
 
 ### Parameters
 
-| Parameter | Type     | Description       |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------- |
 | `message` | `string` | The text to type. |
 
@@ -703,7 +701,7 @@ Executes a script file from storage.
 
 ### Parameters
 
-| Parameter  | Type     | Description                  |
+| Parameter | Type | Description |
 | ---------- | -------- | ---------------------------- |
 | `filename` | `string` | The path to the script file. |
 
@@ -736,11 +734,11 @@ console.log("PSRAM Free:", memoryStats.psram_free);
 <!-- index-start -->
 ## device functions
 
-- [device.getName()](#devicegetname)
-- [device.getBoard()](#devicegetboard)
-- [device.getModel()](#devicegetmodel)
-- [device.getBatteryCharge()](#devicegetbatterycharge)
-- [device.getFreeHeapSize()](#devicegetfreeheapsize)
+* [device.getName()](#devicegetname)
+* [device.getBoard()](#devicegetboard)
+* [device.getModel()](#devicegetmodel)
+* [device.getBatteryCharge()](#devicegetbatterycharge)
+* [device.getFreeHeapSize()](#devicegetfreeheapsize)
 <!-- index-end -->
 
 ## device.getName()
@@ -837,21 +835,21 @@ Retrieves information about the device's memory usage.
 
 An object containing RAM and PSRAM statistics:
 
-- `ram_free`: Free RAM available (in bytes).
-- `ram_min_free`: Minimum free RAM recorded (in bytes).
-- `ram_largest_free_block`: Largest contiguous free RAM block (in bytes).
-- `ram_size`: Total RAM size (in bytes).
-- `psram_free`: Free PSRAM available (in bytes).
-- `psram_size`: Total PSRAM size (in bytes).
+* `ram_free`: Free RAM available (in bytes).
+* `ram_min_free`: Minimum free RAM recorded (in bytes).
+* `ram_largest_free_block`: Largest contiguous free RAM block (in bytes).
+* `ram_size`: Total RAM size (in bytes).
+* `psram_free`: Free PSRAM available (in bytes).
+* `psram_size`: Total PSRAM size (in bytes).
 
-| Name                     | Type     |
+| Name | Type |
 | ------------------------ | -------- |
-| `ram_free`               | `number` |
-| `ram_min_free`           | `number` |
+| `ram_free` | `number` |
+| `ram_min_free` | `number` |
 | `ram_largest_free_block` | `number` |
-| `ram_size`               | `number` |
-| `psram_free`             | `number` |
-| `psram_size`             | `number` |
+| `ram_size` | `number` |
+| `psram_free` | `number` |
+| `psram_size` | `number` |
 
 
 <a name="dialogmd"></a>
@@ -878,18 +876,18 @@ dialog.viewFile(filePath);
 <!-- index-start -->
 ## dialog functions
 
-- [dialog.drawStatusBar()](#dialogdrawstatusbar)
-- [dialog.message()](#dialogmessage)
-- [dialog.info()](#dialoginfo)
-- [dialog.success()](#dialogsuccess)
-- [dialog.warning()](#dialogwarning)
-- [dialog.error()](#dialogerror)
-- [dialog.choice()](#dialogchoice)
-- [dialog.pickFile()](#dialogpickfile)
-- [dialog.prompt()](#dialogprompt)
-- [dialog.viewFile()](#dialogviewfile)
-- [dialog.viewText()](#dialogviewtext)
-- [dialog.createTextViewer()](#dialogcreatetextviewer)
+* [dialog.drawStatusBar()](#dialogdrawstatusbar)
+* [dialog.message()](#dialogmessage)
+* [dialog.info()](#dialoginfo)
+* [dialog.success()](#dialogsuccess)
+* [dialog.warning()](#dialogwarning)
+* [dialog.error()](#dialogerror)
+* [dialog.choice()](#dialogchoice)
+* [dialog.pickFile()](#dialogpickfile)
+* [dialog.prompt()](#dialogprompt)
+* [dialog.viewFile()](#dialogviewfile)
+* [dialog.viewText()](#dialogviewtext)
+* [dialog.createTextViewer()](#dialogcreatetextviewer)
 <!-- index-end -->
 
 ## dialog.drawStatusBar()
@@ -937,13 +935,13 @@ if (choice === "right") console.log("User chose Yes!");
 
 ### Parameters
 
-| Parameter         | Type                                                           | Description                                                                                                                        |
+| Parameter | Type | Description |
 | ----------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `message`         | `string`                                                       | The message to display.                                                                                                            |
-| `buttons`?        | \{ `left`: `string`; `center`: `string`; `right`: `string`; \} | If `true`, waits for a key press before closing (default: `false`). If an object, displays up to three buttons with custom labels. |
-| `buttons.left`?   | `string`                                                       | -                                                                                                                                  |
-| `buttons.center`? | `string`                                                       | -                                                                                                                                  |
-| `buttons.right`?  | `string`                                                       | -                                                                                                                                  |
+| `message` | `string` | The message to display. |
+| `buttons`? | \{ `left`: `string`; `center`: `string`; `right`: `string`; \} | If `true`, waits for a key press before closing (default: `false`). If an object, displays up to three buttons with custom labels. |
+| `buttons.left`? | `string` | - |
+| `buttons.center`? | `string` | - |
+| `buttons.right`? | `string` | - |
 
 ### Returns
 
@@ -970,9 +968,9 @@ dialog.info("Operation completed successfully.");
 
 ### Parameters
 
-| Parameter          | Type      | Description                                                         |
+| Parameter | Type | Description |
 | ------------------ | --------- | ------------------------------------------------------------------- |
-| `message`          | `string`  | The info message to display.                                        |
+| `message` | `string` | The info message to display. |
 | `waitForKeyPress`? | `boolean` | If `true`, waits for a key press before closing (default: `false`). |
 
 ### Returns
@@ -998,9 +996,9 @@ dialog.success("Operation completed successfully.");
 
 ### Parameters
 
-| Parameter          | Type      | Description                                                         |
+| Parameter | Type | Description |
 | ------------------ | --------- | ------------------------------------------------------------------- |
-| `message`          | `string`  | The success message to display.                                     |
+| `message` | `string` | The success message to display. |
 | `waitForKeyPress`? | `boolean` | If `true`, waits for a key press before closing (default: `false`). |
 
 ### Returns
@@ -1026,9 +1024,9 @@ dialog.warning("Warning!");
 
 ### Parameters
 
-| Parameter          | Type      | Description                                                         |
+| Parameter | Type | Description |
 | ------------------ | --------- | ------------------------------------------------------------------- |
-| `message`          | `string`  | The warning message to display.                                     |
+| `message` | `string` | The warning message to display. |
 | `waitForKeyPress`? | `boolean` | If `true`, waits for a key press before closing (default: `false`). |
 
 ### Returns
@@ -1054,9 +1052,9 @@ dialog.error("An error occurred!", true);
 
 ### Parameters
 
-| Parameter          | Type      | Description                                                         |
+| Parameter | Type | Description |
 | ------------------ | --------- | ------------------------------------------------------------------- |
-| `message`          | `string`  | The error message to display.                                       |
+| `message` | `string` | The error message to display. |
 | `waitForKeyPress`? | `boolean` | If `true`, waits for a key press before closing (default: `false`). |
 
 ### Returns
@@ -1098,9 +1096,9 @@ console.log("selectedObject:", selectedObject); // it should print "go_back", "c
 
 ### Parameters
 
-| Parameter | Type                                                           | Description                                                             |
+| Parameter | Type | Description |
 | --------- | -------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `values`  | `string`[] \| \[`string`, `string`\][] \| \{\} \| `string`[][] | An array of options to choose from. Can also be nested array or object. |
+| `values` | `string`[] \| \[`string`, `string`\][] \| \{\} \| `string`[][] | An array of options to choose from. Can also be nested array or object. |
 
 ### Returns
 
@@ -1128,10 +1126,10 @@ dialog.viewFile(filePath);
 
 ### Parameters
 
-| Parameter    | Type     | Description                            |
+| Parameter | Type | Description |
 | ------------ | -------- | -------------------------------------- |
-| `path`?      | `string` | The initial directory path (optional). |
-| `extension`? | `string` | The file extension filter (optional).  |
+| `path`? | `string` | The initial directory path (optional). |
+| `extension`? | `string` | The file extension filter (optional). |
 
 ### Returns
 
@@ -1151,11 +1149,11 @@ Opens an on-screen keyboard for user input.
 
 ### Parameters
 
-| Parameter      | Type     | Description                        |
+| Parameter | Type | Description |
 | -------------- | -------- | ---------------------------------- |
-| `title`?       | `string` | Title of the keyboard prompt.      |
+| `title`? | `string` | Title of the keyboard prompt. |
 | `valueLength`? | `number` | Maximum length of the input value. |
-| `value`?       | `string` | Initial value to display.          |
+| `value`? | `string` | Initial value to display. |
 
 ### Returns
 
@@ -1185,9 +1183,9 @@ dialog.viewFile(filePath);
 
 ### Parameters
 
-| Parameter | Type     | Description            |
+| Parameter | Type | Description |
 | --------- | -------- | ---------------------- |
-| `path`    | `string` | The file path to view. |
+| `path` | `string` | The file path to view. |
 
 ### Returns
 
@@ -1214,10 +1212,10 @@ dialog.viewText("text to display");
 
 ### Parameters
 
-| Parameter | Type     | Description                              |
+| Parameter | Type | Description |
 | --------- | -------- | ---------------------------------------- |
-| `text`    | `string` | The text to view.                        |
-| `title`?  | `string` | The optional title of the viewer window. |
+| `text` | `string` | The text to view. |
+| `title`? | `string` | The optional title of the viewer window. |
 
 ### Returns
 
@@ -1268,16 +1266,16 @@ while (true) {
 
 ### Parameters
 
-| Parameter                     | Type                                                                                                                                        | Description              |
+| Parameter | Type | Description |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| `text`                        | `string`                                                                                                                                    | The text to view.        |
-| `options`?                    | \{ `fontSize`: `number`; `startX`: `number`; `startY`: `number`; `width`: `number`; `height`: `number`; `indentWrappedLines`: `boolean`; \} | The text viewer options. |
-| `options.fontSize`?           | `number`                                                                                                                                    | -                        |
-| `options.startX`?             | `number`                                                                                                                                    | -                        |
-| `options.startY`?             | `number`                                                                                                                                    | -                        |
-| `options.width`?              | `number`                                                                                                                                    | -                        |
-| `options.height`?             | `number`                                                                                                                                    | -                        |
-| `options.indentWrappedLines`? | `boolean`                                                                                                                                   | -                        |
+| `text` | `string` | The text to view. |
+| `options`? | \{ `fontSize`: `number`; `startX`: `number`; `startY`: `number`; `width`: `number`; `height`: `number`; `indentWrappedLines`: `boolean`; \} | The text viewer options. |
+| `options.fontSize`? | `number` | - |
+| `options.startX`? | `number` | - |
+| `options.startY`? | `number` | - |
+| `options.width`? | `number` | - |
+| `options.height`? | `number` | - |
+| `options.indentWrappedLines`? | `boolean` | - |
 
 ### Returns
 
@@ -1310,32 +1308,32 @@ delay(2000);
 <!-- index-start -->
 ## display functions
 
-- [display.color()](#displaycolor)
-- [display.fill()](#displayfill)
-- [display.setCursor()](#displaysetcursor)
-- [display.print()](#displayprint)
-- [display.println()](#displayprintln)
-- [display.setTextColor()](#displaysettextcolor)
-- [display.setTextAlign()](#displaysettextalign)
-- [display.setTextSize()](#displaysettextsize)
-- [display.drawText()](#displaydrawtext)
-- [display.drawString()](#displaydrawstring)
-- [display.drawPixel()](#displaydrawpixel)
-- [display.drawLine()](#displaydrawline)
-- [display.drawRect()](#displaydrawrect)
-- [display.drawFillRect()](#displaydrawfillrect)
-- [display.drawFillRectGradient()](#displaydrawfillrectgradient)
-- [display.drawRoundRect()](#displaydrawroundrect)
-- [display.drawFillRoundRect()](#displaydrawfillroundrect)
-- [display.drawCircle()](#displaydrawcircle)
-- [display.drawFillCircle()](#displaydrawfillcircle)
-- [display.drawXBitmap()](#displaydrawxbitmap)
-- [display.drawBitmap()](#displaydrawbitmap)
-- [display.drawJpg()](#displaydrawjpg)
-- [display.drawGif()](#displaydrawgif)
-- [display.gifOpen()](#displaygifopen)
-- [display.width()](#displaywidth)
-- [display.height()](#displayheight)
+* [display.color()](#displaycolor)
+* [display.fill()](#displayfill)
+* [display.setCursor()](#displaysetcursor)
+* [display.print()](#displayprint)
+* [display.println()](#displayprintln)
+* [display.setTextColor()](#displaysettextcolor)
+* [display.setTextAlign()](#displaysettextalign)
+* [display.setTextSize()](#displaysettextsize)
+* [display.drawText()](#displaydrawtext)
+* [display.drawString()](#displaydrawstring)
+* [display.drawPixel()](#displaydrawpixel)
+* [display.drawLine()](#displaydrawline)
+* [display.drawRect()](#displaydrawrect)
+* [display.drawFillRect()](#displaydrawfillrect)
+* [display.drawFillRectGradient()](#displaydrawfillrectgradient)
+* [display.drawRoundRect()](#displaydrawroundrect)
+* [display.drawFillRoundRect()](#displaydrawfillroundrect)
+* [display.drawCircle()](#displaydrawcircle)
+* [display.drawFillCircle()](#displaydrawfillcircle)
+* [display.drawXBitmap()](#displaydrawxbitmap)
+* [display.drawBitmap()](#displaydrawbitmap)
+* [display.drawJpg()](#displaydrawjpg)
+* [display.drawGif()](#displaydrawgif)
+* [display.gifOpen()](#displaygifopen)
+* [display.width()](#displaywidth)
+* [display.height()](#displayheight)
 <!-- index-end -->
 
 ## display.color()
@@ -1348,11 +1346,11 @@ Converts RGB values to a display-compatible color format.
 
 ### Parameters
 
-| Parameter | Type     | Description   |
+| Parameter | Type | Description |
 | --------- | -------- | ------------- |
-| `r`       | `number` | Red (0-255)   |
-| `g`       | `number` | Green (0-255) |
-| `b`       | `number` | Blue (0-255)  |
+| `r` | `number` | Red (0-255) |
+| `g` | `number` | Green (0-255) |
+| `b` | `number` | Blue (0-255) |
 
 ### Returns
 
@@ -1372,9 +1370,9 @@ Fills the entire screen with the specified color.
 
 ### Parameters
 
-| Parameter | Type     | Description                                                 |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------------------------------------------------- |
-| `color`   | `number` | Color value (use `display.color(r, g, b)` to generate one). |
+| `color` | `number` | Color value (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1392,10 +1390,10 @@ Sets the cursor position for text rendering.
 
 ### Parameters
 
-| Parameter | Type     | Description   |
+| Parameter | Type | Description |
 | --------- | -------- | ------------- |
-| `x`       | `number` | X-coordinate. |
-| `y`       | `number` | Y-coordinate. |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
 
 ### Returns
 
@@ -1414,7 +1412,7 @@ It also prints text to the Serial Monitor for devices without screen.
 
 ### Parameters
 
-| Parameter | Type    | Description   |
+| Parameter | Type | Description |
 | --------- | ------- | ------------- |
 | ...`args` | `any`[] | Text content. |
 
@@ -1435,7 +1433,7 @@ It also prints text to the Serial Monitor for devices without screen.
 
 ### Parameters
 
-| Parameter | Type    | Description   |
+| Parameter | Type | Description |
 | --------- | ------- | ------------- |
 | ...`args` | `any`[] | Text content. |
 
@@ -1455,9 +1453,9 @@ Sets the text color.
 
 ### Parameters
 
-| Parameter | Type     | Description                                                |
+| Parameter | Type | Description |
 | --------- | -------- | ---------------------------------------------------------- |
-| `color`   | `number` | Text color (use `display.color(r, g, b)` to generate one). |
+| `color` | `number` | Text color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1485,10 +1483,10 @@ display.drawText(50, 50, "Hello!");
 
 ### Parameters
 
-| Parameter   | Type                                                              | Description                       |
+| Parameter | Type | Description |
 | ----------- | ----------------------------------------------------------------- | --------------------------------- |
-| `align`     | `number` \| `"left"` \| `"center"` \| `"right"`                   | Horizontal alignment of the text. |
-| `baseline`? | `number` \| `"top"` \| `"middle"` \| `"bottom"` \| `"alphabetic"` | Vertical alignment of the text.   |
+| `align` | `number` \| `"left"` \| `"center"` \| `"right"` | Horizontal alignment of the text. |
+| `baseline`? | `number` \| `"top"` \| `"middle"` \| `"bottom"` \| `"alphabetic"` | Vertical alignment of the text. |
 
 ### Returns
 
@@ -1506,9 +1504,9 @@ Sets the text size.
 
 ### Parameters
 
-| Parameter | Type     | Description |
+| Parameter | Type | Description |
 | --------- | -------- | ----------- |
-| `size`    | `number` | Text size.  |
+| `size` | `number` | Text size. |
 
 ### Returns
 
@@ -1526,11 +1524,11 @@ Draws text at the specified position.
 
 ### Parameters
 
-| Parameter | Type                              | Description          |
+| Parameter | Type | Description |
 | --------- | --------------------------------- | -------------------- |
-| `text`    | `string` \| `number` \| `boolean` | The text to display. |
-| `x`       | `number`                          | X-coordinate.        |
-| `y`       | `number`                          | Y-coordinate.        |
+| `text` | `string` \| `number` \| `boolean` | The text to display. |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
 
 ### Returns
 
@@ -1552,11 +1550,11 @@ Draws a string at the specified position (alias for `drawText`).
 
 ### Parameters
 
-| Parameter | Type                              |
+| Parameter | Type |
 | --------- | --------------------------------- |
-| `text`    | `string` \| `number` \| `boolean` |
-| `x`       | `number`                          |
-| `y`       | `number`                          |
+| `text` | `string` \| `number` \| `boolean` |
+| `x` | `number` |
+| `y` | `number` |
 
 ### Returns
 
@@ -1574,11 +1572,11 @@ Draws a single pixel on the display.
 
 ### Parameters
 
-| Parameter | Type     | Description                                                 |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------------------------------------------------- |
-| `x`       | `number` | X-coordinate.                                               |
-| `y`       | `number` | Y-coordinate.                                               |
-| `color`   | `number` | Pixel color (use `display.color(r, g, b)` to generate one). |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
+| `color` | `number` | Pixel color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1602,13 +1600,13 @@ Draws a line between two points.
 
 ### Parameters
 
-| Parameter | Type     | Description                                                |
+| Parameter | Type | Description |
 | --------- | -------- | ---------------------------------------------------------- |
-| `x`       | `number` | Start X-coordinate.                                        |
-| `y`       | `number` | Start Y-coordinate.                                        |
-| `x2`      | `number` | End X-coordinate.                                          |
-| `y2`      | `number` | End Y-coordinate.                                          |
-| `color`   | `number` | Line color (use `display.color(r, g, b)` to generate one). |
+| `x` | `number` | Start X-coordinate. |
+| `y` | `number` | Start Y-coordinate. |
+| `x2` | `number` | End X-coordinate. |
+| `y2` | `number` | End Y-coordinate. |
+| `color` | `number` | Line color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1632,13 +1630,13 @@ Draws a rectangle outline.
 
 ### Parameters
 
-| Parameter | Type     | Description                                                   |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------------------------------------------------- |
-| `x`       | `number` | X-coordinate.                                                 |
-| `y`       | `number` | Y-coordinate.                                                 |
-| `width`   | `number` | Rectangle width.                                              |
-| `height`  | `number` | Rectangle height.                                             |
-| `color`   | `number` | Outline color (use `display.color(r, g, b)` to generate one). |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
+| `width` | `number` | Rectangle width. |
+| `height` | `number` | Rectangle height. |
+| `color` | `number` | Outline color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1662,13 +1660,13 @@ Draws a filled rectangle.
 
 ### Parameters
 
-| Parameter | Type     | Description                                           |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------------------------------------------- |
-| `x`       | `number` | X-coordinate.                                         |
-| `y`       | `number` | Y-coordinate.                                         |
-| `width`   | `number` | Rectangle width.                                      |
-| `height`  | `number` | Rectangle height.                                     |
-| `color`   | `number` | Color (use `display.color(r, g, b)` to generate one). |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
+| `width` | `number` | Rectangle width. |
+| `height` | `number` | Rectangle height. |
+| `color` | `number` | Color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1694,15 +1692,15 @@ Draws a filled gradient rectangle.
 
 ### Parameters
 
-| Parameter   | Type                           | Description                                             |
+| Parameter | Type | Description |
 | ----------- | ------------------------------ | ------------------------------------------------------- |
-| `x`         | `number`                       | X-coordinate.                                           |
-| `y`         | `number`                       | Y-coordinate.                                           |
-| `width`     | `number`                       | Rectangle width.                                        |
-| `height`    | `number`                       | Rectangle height.                                       |
-| `color1`    | `number`                       | Color 1 (use `display.color(r, g, b)` to generate one). |
-| `color2`    | `number`                       | Color 2 (use `display.color(r, g, b)` to generate one). |
-| `direction` | `"horizontal"` \| `"vertical"` | `'horizontal'` or `'vertical'`.                         |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
+| `width` | `number` | Rectangle width. |
+| `height` | `number` | Rectangle height. |
+| `color1` | `number` | Color 1 (use `display.color(r, g, b)` to generate one). |
+| `color2` | `number` | Color 2 (use `display.color(r, g, b)` to generate one). |
+| `direction` | `"horizontal"` \| `"vertical"` | `'horizontal'` or `'vertical'`. |
 
 ### Returns
 
@@ -1727,14 +1725,14 @@ Draws a round rectangle.
 
 ### Parameters
 
-| Parameter | Type     | Description                                                   |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------------------------------------------------- |
-| `x`       | `number` | X-coordinate.                                                 |
-| `y`       | `number` | Y-coordinate.                                                 |
-| `width`   | `number` | Rectangle width.                                              |
-| `height`  | `number` | Rectangle height.                                             |
-| `radius`  | `number` | Rectangle radius.                                             |
-| `color`   | `number` | Outline color (use `display.color(r, g, b)` to generate one). |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
+| `width` | `number` | Rectangle width. |
+| `height` | `number` | Rectangle height. |
+| `radius` | `number` | Rectangle radius. |
+| `color` | `number` | Outline color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1759,14 +1757,14 @@ Draws a filled round rectangle.
 
 ### Parameters
 
-| Parameter | Type     | Description                                           |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------------------------------------------- |
-| `x`       | `number` | X-coordinate.                                         |
-| `y`       | `number` | Y-coordinate.                                         |
-| `width`   | `number` | Rectangle width.                                      |
-| `height`  | `number` | Rectangle height.                                     |
-| `radius`  | `number` | Rectangle radius.                                     |
-| `color`   | `number` | Color (use `display.color(r, g, b)` to generate one). |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
+| `width` | `number` | Rectangle width. |
+| `height` | `number` | Rectangle height. |
+| `radius` | `number` | Rectangle radius. |
+| `color` | `number` | Color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1784,12 +1782,12 @@ Draws a circle.
 
 ### Parameters
 
-| Parameter | Type     | Description                                                   |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------------------------------------------------- |
-| `x`       | `number` | X-coordinate.                                                 |
-| `y`       | `number` | Y-coordinate.                                                 |
-| `r`       | `number` | Circle radius.                                                |
-| `color`   | `number` | Outline color (use `display.color(r, g, b)` to generate one). |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
+| `r` | `number` | Circle radius. |
+| `color` | `number` | Outline color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1807,12 +1805,12 @@ Draws a filled circle.
 
 ### Parameters
 
-| Parameter | Type     | Description                                           |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------------------------------------------- |
-| `x`       | `number` | X-coordinate.                                         |
-| `y`       | `number` | Y-coordinate.                                         |
-| `r`       | `number` | Circle radius.                                        |
-| `color`   | `number` | Color (use `display.color(r, g, b)` to generate one). |
+| `x` | `number` | X-coordinate. |
+| `y` | `number` | Y-coordinate. |
+| `r` | `number` | Circle radius. |
+| `color` | `number` | Color (use `display.color(r, g, b)` to generate one). |
 
 ### Returns
 
@@ -1840,15 +1838,15 @@ https://www.online-utility.org/image/convert/to/XBM
 
 ### Parameters
 
-| Parameter  | Type          | Description                                                                                                            |
+| Parameter | Type | Description |
 | ---------- | ------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `x`        | `number`      | X-coordinate for the bitmap.                                                                                           |
-| `y`        | `number`      | Y-coordinate for the bitmap.                                                                                           |
-| `bitmap`   | `ArrayBuffer` | The bitmap data stored in an ArrayBuffer (1-bit per pixel).                                                            |
-| `width`    | `number`      | The width of the bitmap in pixels.                                                                                     |
-| `height`   | `number`      | The height of the bitmap in pixels.                                                                                    |
-| `fgColor`  | `number`      | The foreground color (used for `1` bits in the bitmap).                                                                |
-| `bgColor`? | `number`      | (Optional) The background color (used for `0` bits in the bitmap). If not provided then the background is transparent. |
+| `x` | `number` | X-coordinate for the bitmap. |
+| `y` | `number` | Y-coordinate for the bitmap. |
+| `bitmap` | `ArrayBuffer` | The bitmap data stored in an ArrayBuffer (1-bit per pixel). |
+| `width` | `number` | The width of the bitmap in pixels. |
+| `height` | `number` | The height of the bitmap in pixels. |
+| `fgColor` | `number` | The foreground color (used for `1` bits in the bitmap). |
+| `bgColor`? | `number` | (Optional) The background color (used for `0` bits in the bitmap). If not provided then the background is transparent. |
 
 ### Returns
 
@@ -1874,15 +1872,15 @@ Draws a bitmap at the specified position on the screen.
 
 ### Parameters
 
-| Parameter  | Type                      | Description                                                                                                                                                                                                                                                                                                                                     |
+| Parameter | Type | Description |
 | ---------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `x`        | `number`                  | X-coordinate for the bitmap.                                                                                                                                                                                                                                                                                                                    |
-| `y`        | `number`                  | Y-coordinate for the bitmap.                                                                                                                                                                                                                                                                                                                    |
-| `bitmap`   | `ArrayBuffer`             | The bitmap data stored in an `ArrayBuffer`. The format depends on `bpp`: - `16 bpp`: Each pixel is a 16-bit color value (RGB565). - `8 bpp`: Each pixel is an 8-bit color value (RGB332). - `4 bpp`: Each pixel is a 4-bit index into `palette` (2 pixels per byte). - `1 bpp`: Each pixel is a 1-bit index into `palette` (8 pixels per byte). |
-| `width`    | `number`                  | The width of the bitmap in pixels.                                                                                                                                                                                                                                                                                                              |
-| `height`   | `number`                  | The height of the bitmap in pixels.                                                                                                                                                                                                                                                                                                             |
-| `bpp`      | `1` \| `4` \| `8` \| `16` | Bits per pixel (16, 8, 4, or 1).                                                                                                                                                                                                                                                                                                                |
-| `palette`? | `ArrayBuffer`             | A color palette used **only** when `bpp` is 4 or 1. Each entry is a 16-bit color (RGB565).                                                                                                                                                                                                                                                      |
+| `x` | `number` | X-coordinate for the bitmap. |
+| `y` | `number` | Y-coordinate for the bitmap. |
+| `bitmap` | `ArrayBuffer` | The bitmap data stored in an `ArrayBuffer`. The format depends on `bpp`: - `16 bpp`: Each pixel is a 16-bit color value (RGB565). - `8 bpp`: Each pixel is an 8-bit color value (RGB332). - `4 bpp`: Each pixel is a 4-bit index into `palette` (2 pixels per byte). - `1 bpp`: Each pixel is a 1-bit index into `palette` (8 pixels per byte). |
+| `width` | `number` | The width of the bitmap in pixels. |
+| `height` | `number` | The height of the bitmap in pixels. |
+| `bpp` | `1` \| `4` \| `8` \| `16` | Bits per pixel (16, 8, 4, or 1). |
+| `palette`? | `ArrayBuffer` | A color palette used **only** when `bpp` is 4 or 1. Each entry is a 16-bit color (RGB565). |
 
 ### Returns
 
@@ -1905,12 +1903,12 @@ Draws a JPG image on the display.
 
 ### Parameters
 
-| Parameter | Type                                  | Description                                                                                                                                                      |
+| Parameter | Type | Description |
 | --------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`    | `string` \| [`Path`](#path) | The path to the JPG file. Supports: - A string path (e.g., "/images/photo.jpg"). - A `Path` object specifying storage \{ fs: "sd", path: "/images/photo.jpg" \}. |
-| `x`?      | `number`                              | X-coordinate.                                                                                                                                                    |
-| `y`?      | `number`                              | Y-coordinate.                                                                                                                                                    |
-| `center`? | `boolean`                             | -                                                                                                                                                                |
+| `path` | `string` \| [`Path`](#path) | The path to the JPG file. Supports: - A string path (e.g., "/images/photo.jpg"). - A `Path` object specifying storage \{ fs: "sd", path: "/images/photo.jpg" \}. |
+| `x`? | `number` | X-coordinate. |
+| `y`? | `number` | Y-coordinate. |
+| `center`? | `boolean` | - |
 
 ### Returns
 
@@ -1934,13 +1932,13 @@ Draws a GIF image on the display.
 
 ### Parameters
 
-| Parameter         | Type                                  | Description                                                                                                                                                    |
+| Parameter | Type | Description |
 | ----------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`            | `string` \| [`Path`](#path) | The path to the GIF file. Supports: - A string path (e.g., "/images/anim.gif"). - A `Path` object specifying storage \{ fs: "sd", path: "/images/anim.gif" \}. |
-| `x`?              | `number`                              | X-coordinate.                                                                                                                                                  |
-| `y`?              | `number`                              | Y-coordinate.                                                                                                                                                  |
-| `center`?         | `boolean`                             | Whether to center the image.                                                                                                                                   |
-| `playDurationMs`? | `number`                              | Duration to play the GIF.                                                                                                                                      |
+| `path` | `string` \| [`Path`](#path) | The path to the GIF file. Supports: - A string path (e.g., "/images/anim.gif"). - A `Path` object specifying storage \{ fs: "sd", path: "/images/anim.gif" \}. |
+| `x`? | `number` | X-coordinate. |
+| `y`? | `number` | Y-coordinate. |
+| `center`? | `boolean` | Whether to center the image. |
+| `playDurationMs`? | `number` | Duration to play the GIF. |
 
 ### Returns
 
@@ -1958,9 +1956,9 @@ Opens a GIF for manual frame playback.
 
 ### Parameters
 
-| Parameter | Type                                  | Description                                                                                                                                                    |
+| Parameter | Type | Description |
 | --------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`    | `string` \| [`Path`](#path) | The path to the GIF file. Supports: - A string path (e.g., "/images/anim.gif"). - A `Path` object specifying storage \{ fs: "sd", path: "/images/anim.gif" \}. |
+| `path` | `string` \| [`Path`](#path) | The path to the GIF file. Supports: - A string path (e.g., "/images/anim.gif"). - A `Path` object specifying storage \{ fs: "sd", path: "/images/anim.gif" \}. |
 
 ### Returns
 
@@ -2024,16 +2022,16 @@ delay(1000);
 <!-- index-start -->
 ## gpio functions
 
-- [gpio.pinMode()](#gpiopinmode)
-- [gpio.digitalWrite()](#gpiodigitalwrite)
-- [gpio.digitalRead()](#gpiodigitalread)
-- [gpio.analogWrite()](#gpioanalogwrite)
-- [gpio.analogRead()](#gpioanalogread)
-- [gpio.touchRead()](#gpiotouchread)
-- [gpio.dacWrite()](#gpiodacwrite)
-- [gpio.ledcSetup()](#gpioledcsetup)
-- [gpio.ledcAttachPin()](#gpioledcattachpin)
-- [gpio.ledcWrite()](#gpioledcwrite)
+* [gpio.pinMode()](#gpiopinmode)
+* [gpio.digitalWrite()](#gpiodigitalwrite)
+* [gpio.digitalRead()](#gpiodigitalread)
+* [gpio.analogWrite()](#gpioanalogwrite)
+* [gpio.analogRead()](#gpioanalogread)
+* [gpio.touchRead()](#gpiotouchread)
+* [gpio.dacWrite()](#gpiodacwrite)
+* [gpio.ledcSetup()](#gpioledcsetup)
+* [gpio.ledcAttachPin()](#gpioledcattachpin)
+* [gpio.ledcWrite()](#gpioledcwrite)
 <!-- index-end -->
 
 ## gpio.pinMode()
@@ -2046,10 +2044,10 @@ Configures the specified pin mode.
 
 ### Parameters
 
-| Parameter | Type                 | Description                                    |
+| Parameter | Type | Description |
 | --------- | -------------------- | ---------------------------------------------- |
-| `pin`     | `string` \| `number` | GPIO pin number or name (e.g., `26` or "G26"). |
-| `mode`    | `Mode`               | Pin mode (`INPUT`, `OUTPUT`, `PULLUP`, etc.).  |
+| `pin` | `string` \| `number` | GPIO pin number or name (e.g., `26` or "G26"). |
+| `mode` | `Mode` | Pin mode (`INPUT`, `OUTPUT`, `PULLUP`, etc.). |
 
 ### Returns
 
@@ -2067,10 +2065,10 @@ Writes a digital value to a pin.
 
 ### Parameters
 
-| Parameter | Type                    | Description                     |
+| Parameter | Type | Description |
 | --------- | ----------------------- | ------------------------------- |
-| `pin`     | `string` \| `number`    | GPIO pin number or name.        |
-| `value`   | `boolean` \| `PinValue` | `HIGH`/`LOW` or `true`/`false`. |
+| `pin` | `string` \| `number` | GPIO pin number or name. |
+| `value` | `boolean` \| `PinValue` | `HIGH`/`LOW` or `true`/`false`. |
 
 ### Returns
 
@@ -2088,9 +2086,9 @@ Reads the digital state of a pin.
 
 ### Parameters
 
-| Parameter | Type                 | Description              |
+| Parameter | Type | Description |
 | --------- | -------------------- | ------------------------ |
-| `pin`     | `string` \| `number` | GPIO pin number or name. |
+| `pin` | `string` \| `number` | GPIO pin number or name. |
 
 ### Returns
 
@@ -2110,10 +2108,10 @@ Writes an analog value (PWM) to a pin.
 
 ### Parameters
 
-| Parameter | Type                 | Description              |
+| Parameter | Type | Description |
 | --------- | -------------------- | ------------------------ |
-| `pin`     | `string` \| `number` | GPIO pin number or name. |
-| `value`   | `number`             | PWM duty cycle (0-255).  |
+| `pin` | `string` \| `number` | GPIO pin number or name. |
+| `value` | `number` | PWM duty cycle (0-255). |
 
 ### Returns
 
@@ -2131,9 +2129,9 @@ Reads the analog value from a pin.
 
 ### Parameters
 
-| Parameter | Type                 | Description              |
+| Parameter | Type | Description |
 | --------- | -------------------- | ------------------------ |
-| `pin`     | `string` \| `number` | GPIO pin number or name. |
+| `pin` | `string` \| `number` | GPIO pin number or name. |
 
 ### Returns
 
@@ -2153,9 +2151,9 @@ Reads the capacitive touch sensor value from a pin.
 
 ### Parameters
 
-| Parameter | Type                 | Description              |
+| Parameter | Type | Description |
 | --------- | -------------------- | ------------------------ |
-| `pin`     | `string` \| `number` | GPIO pin number or name. |
+| `pin` | `string` \| `number` | GPIO pin number or name. |
 
 ### Returns
 
@@ -2175,10 +2173,10 @@ Writes a DAC (Digital-to-Analog) value to a pin.
 
 ### Parameters
 
-| Parameter | Type                 | Description              |
+| Parameter | Type | Description |
 | --------- | -------------------- | ------------------------ |
-| `pin`     | `string` \| `number` | GPIO pin number or name. |
-| `value`   | `number`             | DAC value (0-255).       |
+| `pin` | `string` \| `number` | GPIO pin number or name. |
+| `value` | `number` | DAC value (0-255). |
 
 ### Returns
 
@@ -2200,10 +2198,10 @@ Configures an LEDC (PWM) channel with a specific frequency and resolution.
 
 ### Parameters
 
-| Parameter         | Type     | Description                                        |
+| Parameter | Type | Description |
 | ----------------- | -------- | -------------------------------------------------- |
-| `channel`         | `number` | LEDC channel number (0–15).                        |
-| `freq`            | `number` | PWM frequency in Hz.                               |
+| `channel` | `number` | LEDC channel number (0–15). |
+| `freq` | `number` | PWM frequency in Hz. |
 | `resolution_bits` | `number` | Resolution (1–16 bits, defining duty cycle range). |
 
 ### Returns
@@ -2224,9 +2222,9 @@ Attaches a GPIO pin to an LEDC (PWM) channel.
 
 ### Parameters
 
-| Parameter | Type     | Description                 |
+| Parameter | Type | Description |
 | --------- | -------- | --------------------------- |
-| `pin`     | `number` | GPIO pin number.            |
+| `pin` | `number` | GPIO pin number. |
 | `channel` | `number` | LEDC channel number (0–15). |
 
 ### Returns
@@ -2247,10 +2245,10 @@ Sets the PWM duty cycle for a specific LEDC (PWM) channel.
 
 ### Parameters
 
-| Parameter | Type     | Description                                |
+| Parameter | Type | Description |
 | --------- | -------- | ------------------------------------------ |
-| `channel` | `number` | LEDC channel number (0–15).                |
-| `duty`    | `number` | Duty cycle (0 to `2^resolution_bits - 1`). |
+| `channel` | `number` | LEDC channel number (0–15). |
+| `duty` | `number` | Duty cycle (0 to `2^resolution_bits - 1`). |
 
 ### Returns
 
@@ -2283,9 +2281,9 @@ console.log("Transmission successful:", success);
 <!-- index-start -->
 ## ir functions
 
-- [ir.read()](#irread)
-- [ir.readRaw()](#irreadraw)
-- [ir.transmitFile()](#irtransmitfile)
+* [ir.read()](#irread)
+* [ir.readRaw()](#irreadraw)
+* [ir.transmitFile()](#irtransmitfile)
 <!-- index-end -->
 
 ## ir.read()
@@ -2298,7 +2296,7 @@ Reads an infrared signal within a given timeout.
 
 ### Parameters
 
-| Parameter        | Type     | Description                  |
+| Parameter | Type | Description |
 | ---------------- | -------- | ---------------------------- |
 | `timeoutSeconds` | `number` | Timeout duration in seconds. |
 
@@ -2320,7 +2318,7 @@ Reads an infrared signal in raw format within a given timeout.
 
 ### Parameters
 
-| Parameter        | Type     | Description                  |
+| Parameter | Type | Description |
 | ---------------- | -------- | ---------------------------- |
 | `timeoutSeconds` | `number` | Timeout duration in seconds. |
 
@@ -2342,9 +2340,9 @@ Transmits an infrared signal stored in a file.
 
 ### Parameters
 
-| Parameter | Type     | Description                 |
+| Parameter | Type | Description |
 | --------- | -------- | --------------------------- |
-| `path`    | `string` | Path to the IR signal file. |
+| `path` | `string` | Path to the IR signal file. |
 
 ### Returns
 
@@ -2374,13 +2372,13 @@ while (true) {
 <!-- index-start -->
 ## keyboard functions
 
-- [keyboard.getKeysPressed()](#keyboardgetkeyspressed)
-- [keyboard.getPrevPress()](#keyboardgetprevpress)
-- [keyboard.getSelPress()](#keyboardgetselpress)
-- [keyboard.getNextPress()](#keyboardgetnextpress)
-- [keyboard.getEscPress()](#keyboardgetescpress)
-- [keyboard.getAnyPress()](#keyboardgetanypress)
-- [keyboard.keyboard()](#keyboardkeyboard)
+* [keyboard.getKeysPressed()](#keyboardgetkeyspressed)
+* [keyboard.getPrevPress()](#keyboardgetprevpress)
+* [keyboard.getSelPress()](#keyboardgetselpress)
+* [keyboard.getNextPress()](#keyboardgetnextpress)
+* [keyboard.getEscPress()](#keyboardgetescpress)
+* [keyboard.getAnyPress()](#keyboardgetanypress)
+* [keyboard.keyboard()](#keyboardkeyboard)
 <!-- index-end -->
 
 ## keyboard.getKeysPressed()
@@ -2409,9 +2407,9 @@ Checks if the "previous" button was pressed.
 
 ### Parameters
 
-| Parameter | Type      | Description                                                                                                                                                 |
+| Parameter | Type | Description |
 | --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `hold`?   | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
+| `hold`? | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
 
 ### Returns
 
@@ -2431,9 +2429,9 @@ Checks if the "select" button was pressed.
 
 ### Parameters
 
-| Parameter | Type      | Description                                                                                                                                                 |
+| Parameter | Type | Description |
 | --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `hold`?   | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
+| `hold`? | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
 
 ### Returns
 
@@ -2453,9 +2451,9 @@ Checks if the "next" button was pressed.
 
 ### Parameters
 
-| Parameter | Type      | Description                                                                                                                                                 |
+| Parameter | Type | Description |
 | --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `hold`?   | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
+| `hold`? | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
 
 ### Returns
 
@@ -2475,9 +2473,9 @@ Checks if the "esc" button was pressed.
 
 ### Parameters
 
-| Parameter | Type      | Description                                                                                                                                                 |
+| Parameter | Type | Description |
 | --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `hold`?   | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
+| `hold`? | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
 
 ### Returns
 
@@ -2497,9 +2495,9 @@ Checks if any button was pressed.
 
 ### Parameters
 
-| Parameter | Type      | Description                                                                                                                                                 |
+| Parameter | Type | Description |
 | --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `hold`?   | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
+| `hold`? | `boolean` | If `true`, returns `true` as long as any button is held down. If `false` or omitted, returns `true` only on press and repeats every X ms. Default: `false`. |
 
 ### Returns
 
@@ -2519,11 +2517,11 @@ Opens an on-screen keyboard for user input.
 
 ### Parameters
 
-| Parameter     | Type     | Description                        |
+| Parameter | Type | Description |
 | ------------- | -------- | ---------------------------------- |
-| `title`       | `string` | Title of the keyboard prompt.      |
+| `title` | `string` | Title of the keyboard prompt. |
 | `valueLength` | `number` | Maximum length of the input value. |
-| `value`       | `string` | Initial value to display.          |
+| `value` | `string` | Initial value to display. |
 
 ### Returns
 
@@ -2551,7 +2549,7 @@ notification.blink("short"); // Blinks using a predefined short duration
 <!-- index-start -->
 ## notification functions
 
-- [notification.blink()](#notificationblink)
+* [notification.blink()](#notificationblink)
 <!-- index-end -->
 
 ## notification.blink()
@@ -2573,7 +2571,7 @@ digitalWrite(19, LOW);
 
 ### Parameters
 
-| Parameter    | Type                              | Description                                                 |
+| Parameter | Type | Description |
 | ------------ | --------------------------------- | ----------------------------------------------------------- |
 | `durationMs` | `number` \| `"short"` \| `"long"` | Duration in milliseconds for how long the LED should blink. |
 
@@ -2601,10 +2599,10 @@ console.log("Received:", input);
 <!-- index-start -->
 ## serial functions
 
-- [serial.print()](#serialprint)
-- [serial.println()](#serialprintln)
-- [serial.readln()](#serialreadln)
-- [serial.cmd()](#serialcmd)
+* [serial.print()](#serialprint)
+* [serial.println()](#serialprintln)
+* [serial.readln()](#serialreadln)
+* [serial.cmd()](#serialcmd)
 <!-- index-end -->
 
 ## serial.print()
@@ -2617,7 +2615,7 @@ Sends a message over the serial connection without a newline.
 
 ### Parameters
 
-| Parameter | Type    | Description          |
+| Parameter | Type | Description |
 | --------- | ------- | -------------------- |
 | ...`args` | `any`[] | The values to print. |
 
@@ -2637,7 +2635,7 @@ Sends a message over the serial connection with a newline at the end.
 
 ### Parameters
 
-| Parameter | Type    | Description          |
+| Parameter | Type | Description |
 | --------- | ------- | -------------------- |
 | ...`args` | `any`[] | The values to print. |
 
@@ -2657,7 +2655,7 @@ Reads a line of input from the serial connection.
 
 ### Parameters
 
-| Parameter               | Type     | Description                                                        |
+| Parameter | Type | Description |
 | ----------------------- | -------- | ------------------------------------------------------------------ |
 | `timeoutInMiliseconds`? | `number` | The time (in miliseconds) to wait for a connection before failing. |
 
@@ -2679,7 +2677,7 @@ Executes a serial command list: controlling-device/serial.md.
 
 ### Parameters
 
-| Parameter | Type     |
+| Parameter | Type |
 | --------- | -------- |
 | `command` | `string` |
 
@@ -2735,14 +2733,14 @@ storage.rmdir("/data/newdir");
 <!-- index-start -->
 ## storage functions
 
-- [storage.Dirent](#storagedirent)
-- [storage.read()](#storageread)
-- [storage.write()](#storagewrite)
-- [storage.readdir()](#storagereaddir)
-- [storage.rename()](#storagerename)
-- [storage.remove()](#storageremove)
-- [storage.mkdir()](#storagemkdir)
-- [storage.rmdir()](#storagermdir)
+* [storage.Dirent](#storagedirent)
+* [storage.read()](#storageread)
+* [storage.write()](#storagewrite)
+* [storage.readdir()](#storagereaddir)
+* [storage.rename()](#storagerename)
+* [storage.remove()](#storageremove)
+* [storage.mkdir()](#storagemkdir)
+* [storage.rmdir()](#storagermdir)
 <!-- index-end -->
 
 ## storage.Dirent
@@ -2751,10 +2749,10 @@ Directory entry representing a file or directory.
 
 ### Properties
 
-| Property                               | Type      |
+| Property | Type |
 | -------------------------------------- | --------- |
-| <a id="name"></a> `name`               | `string`  |
-| <a id="size"></a> `size`               | `number`  |
+| <a id="name"></a> `name` | `string` |
+| <a id="size"></a> `size` | `number` |
 | <a id="isdirectory"></a> `isDirectory` | `boolean` |
 
 ---
@@ -2771,10 +2769,10 @@ Reads the content of a file.
 
 #### Parameters
 
-| Parameter | Type                                  | Description                                                                                                                                    |
+| Parameter | Type | Description |
 | --------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`    | `string` \| [`Path`](#path) | The path to the file. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
-| `binary`? | `false`                               | If `true`, returns the file content as a `Uint8Array` (default: `false`).                                                                      |
+| `path` | `string` \| [`Path`](#path) | The path to the file. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
+| `binary`? | `false` | If `true`, returns the file content as a `Uint8Array` (default: `false`). |
 
 #### Returns
 
@@ -2782,8 +2780,8 @@ Reads the content of a file.
 
 The file content as:
 
-- A `string` if `binary` is `false` or omitted.
-- A `Uint8Array` if `binary` is `true`.
+* A `string` if `binary` is `false` or omitted.
+* A `Uint8Array` if `binary` is `true`.
 
 ### Call Signature
 
@@ -2795,10 +2793,10 @@ Reads the content of a file.
 
 #### Parameters
 
-| Parameter | Type                                  | Description                                                                                                                                    |
+| Parameter | Type | Description |
 | --------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`    | `string` \| [`Path`](#path) | The path to the file. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
-| `binary`  | `true`                                | If `true`, returns the file content as a `Uint8Array` (default: `false`).                                                                      |
+| `path` | `string` \| [`Path`](#path) | The path to the file. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
+| `binary` | `true` | If `true`, returns the file content as a `Uint8Array` (default: `false`). |
 
 #### Returns
 
@@ -2806,8 +2804,8 @@ Reads the content of a file.
 
 The file content as:
 
-- A `string` if `binary` is `false` or omitted.
-- A `Uint8Array` if `binary` is `true`.
+* A `string` if `binary` is `false` or omitted.
+* A `Uint8Array` if `binary` is `true`.
 
 ---
 
@@ -2826,12 +2824,12 @@ Writes data to a file, optionally inserting at a specific position.
 
 ### Parameters
 
-| Parameter   | Type                                  | Description                                                                                                                                                                                      |
+| Parameter | Type | Description |
 | ----------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `path`      | `string` \| [`Path`](#path) | The file path. Supports: - A string like `"/file.txt"`. - A `Path` object like `{ fs: "sd", path: "/file.txt" }`.                                                                                |
-| `data`      | `string` \| `Uint8Array`              | The content to write. Can be a `string` or `Uint8Array`.                                                                                                                                         |
-| `mode`?     | `"write"` \| `"append"`               | How to write: - `"write"` (default): Replace the file content. - `"append"`: Add to the end of the file.                                                                                         |
-| `position`? | `string` \| `number`                  | Where to insert the data: - A `number`: Insert at this byte position. - A `string`: Insert **before** the first time this text appears. - `"end"`: Add to the end (default for `"append"` mode). |
+| `path` | `string` \| [`Path`](#path) | The file path. Supports: - A string like `"/file.txt"`. - A `Path` object like `{ fs: "sd", path: "/file.txt" }`. |
+| `data` | `string` \| `Uint8Array` | The content to write. Can be a `string` or `Uint8Array`. |
+| `mode`? | `"write"` \| `"append"` | How to write: - `"write"` (default): Replace the file content. - `"append"`: Add to the end of the file. |
+| `position`? | `string` \| `number` | Where to insert the data: - A `number`: Insert at this byte position. - A `string`: Insert **before** the first time this text appears. - `"end"`: Add to the end (default for `"append"` mode). |
 
 ### Returns
 
@@ -2858,11 +2856,11 @@ Lists the contents of a directory.
 
 #### Parameters
 
-| Parameter                | Type                                  | Description                                                                                                                                  |
+| Parameter | Type | Description |
 | ------------------------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`                   | `string` \| [`Path`](#path) | The directory path. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
-| `options`?               | \{ `withFileTypes`: `false`; \}       | -                                                                                                                                            |
-| `options.withFileTypes`? | `false`                               | -                                                                                                                                            |
+| `path` | `string` \| [`Path`](#path) | The directory path. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
+| `options`? | \{ `withFileTypes`: `false`; \} | - |
+| `options.withFileTypes`? | `false` | - |
 
 #### Returns
 
@@ -2885,11 +2883,11 @@ Lists the contents of a directory.
 
 #### Parameters
 
-| Parameter               | Type                                  | Description                                                                                                                                  |
+| Parameter | Type | Description |
 | ----------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`                  | `string` \| [`Path`](#path) | The directory path. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
-| `options`               | \{ `withFileTypes`: `true`; \}        | If `{ withFileTypes: true }`, returns an array of `Dirent` objects with file type info.                                                      |
-| `options.withFileTypes` | `true`                                | -                                                                                                                                            |
+| `path` | `string` \| [`Path`](#path) | The directory path. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
+| `options` | \{ `withFileTypes`: `true`; \} | If `{ withFileTypes: true }`, returns an array of `Dirent` objects with file type info. |
+| `options.withFileTypes` | `true` | - |
 
 #### Returns
 
@@ -2909,10 +2907,10 @@ Renames a file or directory.
 
 ### Parameters
 
-| Parameter | Type                                  | Description                                                                                                                                                         |
+| Parameter | Type | Description |
 | --------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `oldPath` | `string` \| [`Path`](#path) | The current path of the file or directory. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
-| `newPath` | `string`                              | The new path.                                                                                                                                                       |
+| `newPath` | `string` | The new path. |
 
 ### Returns
 
@@ -2932,9 +2930,9 @@ Deletes a file or directory.
 
 ### Parameters
 
-| Parameter | Type                                  | Description                                                                                                                                                           |
+| Parameter | Type | Description |
 | --------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`    | `string` \| [`Path`](#path) | The path of the file or directory to delete. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
+| `path` | `string` \| [`Path`](#path) | The path of the file or directory to delete. Supports: - A string path (e.g., `"/file.txt"`). - A `Path` object specifying storage `{ fs: "sd", path: "/file.txt" }`. |
 
 ### Returns
 
@@ -2954,9 +2952,9 @@ Creates a directory, including parent directories if necessary.
 
 ### Parameters
 
-| Parameter | Type                                  | Description                |
+| Parameter | Type | Description |
 | --------- | ------------------------------------- | -------------------------- |
-| `path`    | `string` \| [`Path`](#path) | The path to the directory. |
+| `path` | `string` \| [`Path`](#path) | The path to the directory. |
 
 ### Returns
 
@@ -2976,9 +2974,9 @@ Removes an empty directory.
 
 ### Parameters
 
-| Parameter | Type                                  | Description                |
+| Parameter | Type | Description |
 | --------- | ------------------------------------- | -------------------------- |
-| `path`    | `string` \| [`Path`](#path) | The path to the directory. |
+| `path` | `string` \| [`Path`](#path) | The path to the directory. |
 
 ### Returns
 
@@ -3017,10 +3015,10 @@ if (success) {
 <!-- index-start -->
 ## subghz functions
 
-- [subghz.setFrequency()](#subghzsetfrequency)
-- [subghz.read()](#subghzread)
-- [subghz.readRaw()](#subghzreadraw)
-- [subghz.transmitFile()](#subghztransmitfile)
+* [subghz.setFrequency()](#subghzsetfrequency)
+* [subghz.read()](#subghzread)
+* [subghz.readRaw()](#subghzreadraw)
+* [subghz.transmitFile()](#subghztransmitfile)
 <!-- index-end -->
 
 ## subghz.setFrequency()
@@ -3033,9 +3031,9 @@ Sets the frequency for Sub-GHz communication.
 
 ### Parameters
 
-| Parameter | Type     | Description                               |
+| Parameter | Type | Description |
 | --------- | -------- | ----------------------------------------- |
-| `freq`    | `number` | Frequency in MHz (e.g., 433 for 433 MHz). |
+| `freq` | `number` | Frequency in MHz (e.g., 433 for 433 MHz). |
 
 ### Returns
 
@@ -3053,7 +3051,7 @@ Reads an incoming signal.
 
 ### Parameters
 
-| Parameter        | Type     | Description                                   |
+| Parameter | Type | Description |
 | ---------------- | -------- | --------------------------------------------- |
 | `timeoutSeconds` | `number` | Maximum time in seconds to wait for a signal. |
 
@@ -3075,7 +3073,7 @@ Reads raw incoming signal data.
 
 ### Parameters
 
-| Parameter        | Type     | Description                                   |
+| Parameter | Type | Description |
 | ---------------- | -------- | --------------------------------------------- |
 | `timeoutSeconds` | `number` | Maximum time in seconds to wait for a signal. |
 
@@ -3097,7 +3095,7 @@ Transmits a saved signal from a file.
 
 ### Parameters
 
-| Parameter  | Type     | Description                                             |
+| Parameter | Type | Description |
 | ---------- | -------- | ------------------------------------------------------- |
 | `filename` | `string` | The path to the file containing the signal to transmit. |
 
@@ -3136,12 +3134,12 @@ console.log(response.body);
 <!-- index-start -->
 ## WiFi functions
 
-- [wifi.connected()](#wificonnected)
-- [wifi.connect()](#wificonnect)
-- [wifi.connectDialog()](#wificonnectdialog)
-- [wifi.disconnect()](#wifidisconnect)
-- [wifi.scan()](#wifiscan)
-- [wifi.httpFetch()](#wifihttpfetch)
+* [wifi.connected()](#wificonnected)
+* [wifi.connect()](#wificonnect)
+* [wifi.connectDialog()](#wificonnectdialog)
+* [wifi.disconnect()](#wifidisconnect)
+* [wifi.scan()](#wifiscan)
+* [wifi.httpFetch()](#wifihttpfetch)
 <!-- index-end -->
 
 ## wifi.connected()
@@ -3174,11 +3172,11 @@ Connects to a Wi-Fi network.
 
 ### Parameters
 
-| Parameter          | Type     | Description                                                    |
+| Parameter | Type | Description |
 | ------------------ | -------- | -------------------------------------------------------------- |
-| `ssid`             | `string` | The name of the Wi-Fi network (SSID).                          |
+| `ssid` | `string` | The name of the Wi-Fi network (SSID). |
 | `timeoutInSeconds` | `number` | The time (in seconds) to wait for a connection before failing. |
-| `password`         | `string` | The Wi-Fi password.                                            |
+| `password` | `string` | The Wi-Fi password. |
 
 ### Returns
 
@@ -3221,18 +3219,18 @@ Disconnects from the current Wi-Fi network.
 ```ts
 wifi.scan(): {
   encryptionType:
-    | "OPEN"
-    | "WEP"
-    | "WPA_PSK"
-    | "WPA2_PSK"
-    | "WPA_WPA2_PSK"
-    | "ENTERPRISE"
-    | "WPA2_ENTERPRISE"
-    | "WPA3_PSK"
-    | "WPA2_WPA3_PSK"
-    | "WAPI_PSK"
-    | "WPA3_ENT_192"
-    | "MAX";
+ | "OPEN"
+ | "WEP"
+ | "WPA_PSK"
+ | "WPA2_PSK"
+ | "WPA_WPA2_PSK"
+ | "ENTERPRISE"
+ | "WPA2_ENTERPRISE"
+ | "WPA3_PSK"
+ | "WPA2_WPA3_PSK"
+ | "WAPI_PSK"
+ | "WPA3_ENT_192"
+ | "MAX";
   SSID: string;
   MAC: string;
 }[];
@@ -3261,9 +3259,9 @@ Scans for available Wi-Fi networks.
 
 An array of available networks, each containing:
 
-- `encryptionType`: The type of encryption used (e.g., WPA2, WEP).
-- `SSID`: The name of the network.
-- `MAC`: The MAC address of the access point.
+* `encryptionType`: The type of encryption used (e.g., WPA2, WEP).
+* `SSID`: The name of the network.
+* `MAC`: The MAC address of the access point.
 
 ---
 
@@ -3276,15 +3274,15 @@ wifi.httpFetch(
   url: string,
   options?: {
     method:
-      | "GET"
-      | "POST"
-      | "DELETE"
-      | "PATCH"
-      | "PUT"
-      | "HEAD"
-      | "OPTIONS"
-      | "TRACE"
-      | "CONNECT";
+ | "GET"
+ | "POST"
+ | "DELETE"
+ | "PATCH"
+ | "PUT"
+ | "HEAD"
+ | "OPTIONS"
+ | "TRACE"
+ | "CONNECT";
     body: string;
     binaryResponse: false;
     headers: string[] | [string, string][] | Record<string, string>;
@@ -3300,14 +3298,14 @@ Performs an HTTP request.
 
 #### Parameters
 
-| Parameter                 | Type                                                                                                                                                                                                                                                                       | Description                                          |
+| Parameter | Type | Description |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `url`                     | `string`                                                                                                                                                                                                                                                                   | The URL to fetch.                                    |
-| `options`?                | \{ `method`: \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`; `body`: `string`; `binaryResponse`: `false`; `headers`: `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;; \} | Request options including method, body, and headers. |
-| `options.method`?         | \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`                                                                                                                                                        | -                                                    |
-| `options.body`?           | `string`                                                                                                                                                                                                                                                                   | -                                                    |
-| `options.binaryResponse`? | `false`                                                                                                                                                                                                                                                                    | -                                                    |
-| `options.headers`?        | `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;                                                                                                                                                                                               | -                                                    |
+| `url` | `string` | The URL to fetch. |
+| `options`? | \{ `method`: \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`; `body`: `string`; `binaryResponse`: `false`; `headers`: `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;; \} | Request options including method, body, and headers. |
+| `options.method`? | \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"` | - |
+| `options.body`? | `string` | - |
+| `options.binaryResponse`? | `false` | - |
+| `options.headers`? | `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt; | - |
 
 #### Returns
 
@@ -3321,15 +3319,15 @@ Performs an HTTP request.
 
 An object containing:
 
-- `status`: The HTTP response status code (e.g., `200`, `404`).
-- `ok`: `true` if the response status is 200-299, otherwise `false`.
-- `body`: The response body as a string.
+* `status`: The HTTP response status code (e.g., `200`, `404`).
+* `ok`: `true` if the response status is 200-299, otherwise `false`.
+* `body`: The response body as a string.
 
-| Name     | Type      |
+| Name | Type |
 | -------- | --------- |
-| `status` | `number`  |
-| `ok`     | `boolean` |
-| `body`   | `string`  |
+| `status` | `number` |
+| `ok` | `boolean` |
+| `body` | `string` |
 
 ### Call Signature
 
@@ -3338,15 +3336,15 @@ wifi.httpFetch(
   url: string,
   options?: {
     method:
-      | "GET"
-      | "POST"
-      | "DELETE"
-      | "PATCH"
-      | "PUT"
-      | "HEAD"
-      | "OPTIONS"
-      | "TRACE"
-      | "CONNECT";
+ | "GET"
+ | "POST"
+ | "DELETE"
+ | "PATCH"
+ | "PUT"
+ | "HEAD"
+ | "OPTIONS"
+ | "TRACE"
+ | "CONNECT";
     body: string;
     responseType: "string";
     headers: string[] | [string, string][] | Record<string, string>;
@@ -3362,14 +3360,14 @@ Performs an HTTP request.
 
 #### Parameters
 
-| Parameter               | Type                                                                                                                                                                                                                                                                        | Description                                          |
+| Parameter | Type | Description |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `url`                   | `string`                                                                                                                                                                                                                                                                    | The URL to fetch.                                    |
-| `options`?              | \{ `method`: \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`; `body`: `string`; `responseType`: `"string"`; `headers`: `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;; \} | Request options including method, body, and headers. |
-| `options.method`?       | \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`                                                                                                                                                         | -                                                    |
-| `options.body`?         | `string`                                                                                                                                                                                                                                                                    | -                                                    |
-| `options.responseType`? | `"string"`                                                                                                                                                                                                                                                                  | -                                                    |
-| `options.headers`?      | `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;                                                                                                                                                                                                | -                                                    |
+| `url` | `string` | The URL to fetch. |
+| `options`? | \{ `method`: \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`; `body`: `string`; `responseType`: `"string"`; `headers`: `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;; \} | Request options including method, body, and headers. |
+| `options.method`? | \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"` | - |
+| `options.body`? | `string` | - |
+| `options.responseType`? | `"string"` | - |
+| `options.headers`? | `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt; | - |
 
 #### Returns
 
@@ -3383,15 +3381,15 @@ Performs an HTTP request.
 
 An object containing:
 
-- `status`: The HTTP response status code (e.g., `200`, `404`).
-- `ok`: `true` if the response status is 200-299, otherwise `false`.
-- `body`: The response body as a string.
+* `status`: The HTTP response status code (e.g., `200`, `404`).
+* `ok`: `true` if the response status is 200-299, otherwise `false`.
+* `body`: The response body as a string.
 
-| Name     | Type      |
+| Name | Type |
 | -------- | --------- |
-| `status` | `number`  |
-| `ok`     | `boolean` |
-| `body`   | `string`  |
+| `status` | `number` |
+| `ok` | `boolean` |
+| `body` | `string` |
 
 ### Call Signature
 
@@ -3400,15 +3398,15 @@ wifi.httpFetch(
   url: string,
   options?: {
     method:
-      | "GET"
-      | "POST"
-      | "DELETE"
-      | "PATCH"
-      | "PUT"
-      | "HEAD"
-      | "OPTIONS"
-      | "TRACE"
-      | "CONNECT";
+ | "GET"
+ | "POST"
+ | "DELETE"
+ | "PATCH"
+ | "PUT"
+ | "HEAD"
+ | "OPTIONS"
+ | "TRACE"
+ | "CONNECT";
     body: string;
     responseType: "binary";
     headers: string[] | [string, string][] | Record<string, string>;
@@ -3424,14 +3422,14 @@ Performs an HTTP request.
 
 #### Parameters
 
-| Parameter               | Type                                                                                                                                                                                                                                                                        | Description                                          |
+| Parameter | Type | Description |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `url`                   | `string`                                                                                                                                                                                                                                                                    | The URL to fetch.                                    |
-| `options`?              | \{ `method`: \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`; `body`: `string`; `responseType`: `"binary"`; `headers`: `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;; \} | Request options including method, body, and headers. |
-| `options.method`?       | \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`                                                                                                                                                         | -                                                    |
-| `options.body`?         | `string`                                                                                                                                                                                                                                                                    | -                                                    |
-| `options.responseType`? | `"binary"`                                                                                                                                                                                                                                                                  | -                                                    |
-| `options.headers`?      | `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;                                                                                                                                                                                                | -                                                    |
+| `url` | `string` | The URL to fetch. |
+| `options`? | \{ `method`: \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`; `body`: `string`; `responseType`: `"binary"`; `headers`: `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;; \} | Request options including method, body, and headers. |
+| `options.method`? | \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"` | - |
+| `options.body`? | `string` | - |
+| `options.responseType`? | `"binary"` | - |
+| `options.headers`? | `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt; | - |
 
 #### Returns
 
@@ -3445,15 +3443,15 @@ Performs an HTTP request.
 
 An object containing:
 
-- `status`: The HTTP response status code (e.g., `200`, `404`).
-- `ok`: `true` if the response status is 200-299, otherwise `false`.
-- `body`: The response body as a string.
+* `status`: The HTTP response status code (e.g., `200`, `404`).
+* `ok`: `true` if the response status is 200-299, otherwise `false`.
+* `body`: The response body as a string.
 
-| Name     | Type         |
+| Name | Type |
 | -------- | ------------ |
-| `status` | `number`     |
-| `ok`     | `boolean`    |
-| `body`   | `Uint8Array` |
+| `status` | `number` |
+| `ok` | `boolean` |
+| `body` | `Uint8Array` |
 
 ### Call Signature
 
@@ -3462,15 +3460,15 @@ wifi.httpFetch(
   url: string,
   options?: {
     method:
-      | "GET"
-      | "POST"
-      | "DELETE"
-      | "PATCH"
-      | "PUT"
-      | "HEAD"
-      | "OPTIONS"
-      | "TRACE"
-      | "CONNECT";
+ | "GET"
+ | "POST"
+ | "DELETE"
+ | "PATCH"
+ | "PUT"
+ | "HEAD"
+ | "OPTIONS"
+ | "TRACE"
+ | "CONNECT";
     body: string;
     responseType: "string" | "binary";
     headers: string[] | [string, string][] | Record<string, string>;
@@ -3486,14 +3484,14 @@ Performs an HTTP request.
 
 #### Parameters
 
-| Parameter               | Type                                                                                                                                                                                                                                                                                      | Description                                          |
+| Parameter | Type | Description |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `url`                   | `string`                                                                                                                                                                                                                                                                                  | The URL to fetch.                                    |
-| `options`?              | \{ `method`: \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`; `body`: `string`; `responseType`: `"string"` \| `"binary"`; `headers`: `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;; \} | Request options including method, body, and headers. |
-| `options.method`?       | \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`                                                                                                                                                                       | -                                                    |
-| `options.body`?         | `string`                                                                                                                                                                                                                                                                                  | -                                                    |
-| `options.responseType`? | `"string"` \| `"binary"`                                                                                                                                                                                                                                                                  | -                                                    |
-| `options.headers`?      | `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;                                                                                                                                                                                                              | -                                                    |
+| `url` | `string` | The URL to fetch. |
+| `options`? | \{ `method`: \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"`; `body`: `string`; `responseType`: `"string"` \| `"binary"`; `headers`: `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt;; \} | Request options including method, body, and headers. |
+| `options.method`? | \| `"GET"` \| `"POST"` \| `"DELETE"` \| `"PATCH"` \| `"PUT"` \| `"HEAD"` \| `"OPTIONS"` \| `"TRACE"` \| `"CONNECT"` | - |
+| `options.body`? | `string` | - |
+| `options.responseType`? | `"string"` \| `"binary"` | - |
+| `options.headers`? | `string`[] \| \[`string`, `string`\][] \| `Record`&lt;`string`, `string`&gt; | - |
 
 #### Returns
 
@@ -3507,12 +3505,12 @@ Performs an HTTP request.
 
 An object containing:
 
-- `status`: The HTTP response status code (e.g., `200`, `404`).
-- `ok`: `true` if the response status is 200-299, otherwise `false`.
-- `body`: The response body as a string.
+* `status`: The HTTP response status code (e.g., `200`, `404`).
+* `ok`: `true` if the response status is 200-299, otherwise `false`.
+* `body`: The response body as a string.
 
-| Name     | Type                     |
+| Name | Type |
 | -------- | ------------------------ |
-| `status` | `number`                 |
-| `ok`     | `boolean`                |
-| `body`   | `string` \| `Uint8Array` |
+| `status` | `number` |
+| `ok` | `boolean` |
+| `body` | `string` \| `Uint8Array` |

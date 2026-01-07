@@ -17,7 +17,8 @@ The recommended height of the images is:
 
 ## Theme File
 
-Theme settings are stored in a **.json** file, following this structure:
+Theme settings are stored in a `.json` file, following this structure:
+
 ```
 {
   "wifi":"wifi.png",

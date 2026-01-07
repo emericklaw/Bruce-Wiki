@@ -1,6 +1,6 @@
 ---
-tags: 
- - _TODO
+tags:
+ -  _TODO
 todo: All build instructions need checking
 ---
 # Building From Source
@@ -47,7 +47,7 @@ sudo dnf install python3-pip git
 pio run --target clean
 pio run -e m5stack-cardputer
 pio run -e m5stack-cplus2
-pio run -e m5stack-cplus1_1 
+pio run -e m5stack-cplus1_1
 # or pio run to all builds
 # pio run
 pio run -e m5stack-cardputer -t build-firmware

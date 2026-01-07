@@ -1,6 +1,6 @@
 ---
 tags:
- - _TODO
+ -  _TODO
 todo: Check all menu features match documentation
 ---
 # RF
@@ -18,6 +18,7 @@ Scan and copy RF signals in ASK/OOK modulation. It will start with the default f
 
 
 ### Mode
+
 * **Decode**: Tries to decode the signal with RCSwitch decoder.
 * **RAW**: Will display RAW signals obtained from RCSwitch library.
 
@@ -47,7 +48,7 @@ Choose the frequency to scan or a range to detect the frequency.
 
 #### Threshold
 
-Choose the sensitivity of the scanner. 
+Choose the sensitivity of the scanner.
 
 * -60 to a more strict error frequency (more precise)
 * -80 to a more broad frequency (greater error, less precise)
@@ -117,7 +118,7 @@ If using M5Stack, FS1000A or other single pin module to transmit the signal, her
 
 ### RF Module
 
-#### M5 RF433T/R 
+#### M5 RF433T/R
 
 M5 RF433T/R modules or unofficial modules.
 
@@ -150,7 +151,7 @@ This setup is designed to share the SPI bus with the SD Card, but in this case y
 
 ### Unofficial Modules
 
-*  **[FS1000A Transmitter + XY-MK-5V Receiver](https://components101.com/modules/433-mhz-rf-transmitter-module)**
+* **[FS1000A Transmitter + XY-MK-5V Receiver](https://components101.com/modules/433-mhz-rf-transmitter-module)**
     * **Frequency**: Fixed (usually 433MHz)
     * **Modulation**: Only ASK/OOK
     * **Note**: Also sold under various names
@@ -162,7 +163,7 @@ This setup is designed to share the SPI bus with the SD Card, but in this case y
 
 > **Note**: Some modules may have poor range; modifying the antenna can improve performance.
 
-**Default Pins**
+### Default Pins
 
 * `Tx = GROVE_SDA`
 * `Rx = GROVE_SCL`
@@ -174,7 +175,7 @@ This setup is designed to share the SPI bus with the SD Card, but in this case y
 * LoRa modules
 
 
-## Replay Payloads Like Flipper!
+## Replay Payloads Like Flipper
 
 Bruce can now send raw formats similar to those supported in [this repository](https://github.com/Zero-Sploit/FlipperZero-Subghz-DB/tree/main/subghz).
 

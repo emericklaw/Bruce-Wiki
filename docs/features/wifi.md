@@ -1,6 +1,6 @@
 ---
 tags:
- - _TODO
+ -  _TODO
 todo: Properly document each menu feature
 ---
 # WiFi
@@ -25,7 +25,8 @@ Launches an Access point, so you can connect up to 4 guests to share information
 
 ### Target Atks
 
-Scans for a WiFi AP to either: 
+Scans for a WiFi AP to either:
+
 * Get more information of it (MAC and channel),
 * Send Deauth frames
 * Clone AP name and make a Evil Portal
@@ -58,7 +59,7 @@ Spams a list of SSIDs writen in a **.txt** file.
 
 There must be:
 
-* One SSID per line 
+* One SSID per line
 * Up to 32 characters per SSID
 * as many SSID you want
 
@@ -80,8 +81,8 @@ Foods Deauth packets to all Access Points it can find.
 In Evil Portal mode, Bruce creates a open WiFi, with DNS, DHCP and web server for captive portal.
 
 * Evil Portal serves a fake login page that claims to provide internet access if you log in.
-* This is a social engineering attack, and will log the username and passwords entered on the page. 
-* You can type the SSID before and change the current SSID by connecting to the portal from your own device and browsing to http://172.0.0.1/creds or http://172.0.0.1/ssid
+* This is a social engineering attack, and will log the username and passwords entered on the page.
+* You can type the SSID before and change the current SSID by connecting to the portal from your own device and browsing to [http://172.0.0.1/creds](http://172.0.0.1/creds) or [http://172.0.0.1/ssid](http://172.0.0.1/ssid)
 * If your device has an SD Card the usernames and passwords will be logged to Bruce_creds.csv on the SD Card for you to view.
 
 ### Example Portals
@@ -92,7 +93,7 @@ For examples of portals you can check [here](https://github.com/BruceDevices/fir
 
 #### Overview
 
-The `EvilPortal` system supports the ability to define an Access Point (AP) name directly within your HTML files. 
+The `EvilPortal` system supports the ability to define an Access Point (AP) name directly within your HTML files.
 
 By including a specific tag in the first line of your HTML file, Bruce will automatically extract and set the AP name, streamlining the setup process.
 
@@ -102,8 +103,8 @@ By including a specific tag in the first line of your HTML file, Bruce will auto
 1. Add the following tag in the **first line** of your HTML file `<!-- AP="YourCustomAPName" -->`
     * Replace `YourCustomAPName` with the desired name for your Access Point
 2. When the HTML file is loaded, the system will
-    * Parse the first line of the file.  
-    * Detect the `AP="..."` tag.  
+    * Parse the first line of the file.
+    * Detect the `AP="..."` tag.
     * Extract the value and set it as the AP name
 3. If the tag is not present it will ask you for AP name
 
@@ -134,7 +135,7 @@ By including a specific tag in the first line of your HTML file, Bruce will auto
 
 #### Notes
 
-* Ensure the `<!-- AP="..." -->` tag is in the **very first line** of the file. 
+* Ensure the `<!-- AP="..." -->` tag is in the **very first line** of the file.
 * The feature does not affect the functionality of other HTML content
 
 
@@ -222,7 +223,7 @@ This feature does a lot of things at the same time, such as:
 
 ## Responder
 
-[Responder](https://github.com/lgandx/Responder) is a well known tool for exploiting infrastructures, one of the things it does is LLMNR Poisoning, which is what this function in Bruce does (thanks to https://github.com/7h30th3r0n3).
+[Responder](https://github.com/lgandx/Responder) is a well known tool for exploiting infrastructures, one of the things it does is LLMNR Poisoning, which is what this function in Bruce does (thanks to [7h30th3r0n3](https://github.com/7h30th3r0n3)).
 
 
 ## Config

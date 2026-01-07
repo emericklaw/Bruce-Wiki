@@ -7,12 +7,12 @@ First you need to clone the repository and build Bruce from sources.
 You will find the documentation here:
 
 1. [optional] but recommended: Work from a [Python virtualenv](https://github.com/pyenv/pyenv-virtualenv)
-     - This is not required if using VSCode and PlatformIO
+    * This is not required if using VSCode and PlatformIO
 2. [Build Firmware](building-from-source.md)
 3. [Install Firmware](../how-to-install.md#manual-flashing)
 
 
-# Add Support for More Devices
+## Add Support for More Devices
 
 More information [here](porting-to-devices.md).
 
@@ -29,15 +29,17 @@ In `module` repository, we have one folder for each category. Don't hesitate to 
 If we want to create a LoRa menu and module we create a new directory and new files:
 
 ```
-src/
-|-- core/
-|------ menu_items/
-        |---- LoRaMenu.h
-        |---- LoRaMenu.cpp
-|-- modules/
-|------ lora/
-        |---- lora.h
-        |---- lora.cpp
+.
+└── src/
+    ├── core/
+    │   └── menu_items/
+    │       ├── LoRaMenu.h
+    │       └── LoRaMenu.cpp
+    └── modules/
+        └── lora/
+            ├── lora.h
+            └── lora.cpp
+...
 ```
 
 
@@ -59,7 +61,7 @@ pio pkg search mylib
 pio pkg install -l mylib
 ```
 
-**Warning**: do not commit the `platform.io` auto generated file. Instead add your lib in the adequate section of the file. Or ask on the Discord where to write it. 
+**Warning**: do not commit the `platform.io` auto generated file. Instead add your lib in the adequate section of the file. Or ask on the Discord where to write it.
 
 
 ### Custom Libraries
@@ -78,7 +80,7 @@ As an example, we will see how to add a LoRa module in Bruce. This is a 868 MHz 
 You can either add to an existing existing menu, or create a new item in the main menu.
 
 
-#### Add New Main Menu Item
+### Add New Main Menu Item
 
 Register item by creating 2 files:
 
@@ -91,6 +93,7 @@ In `LoRaMenu.h, we declare the menu object with the mandatory methods:
 * `drawIcon()` --> draw the icon
 
 It looks like this:
+
 ```C
 #ifndef __LORA_MENU_H__
 #define __LORA_MENU_H__
@@ -113,6 +116,7 @@ private:
 ```
 
 In `LoRaMenu.cpp` declare the methods needed. Their contents will be explained later in this example.
+
 ```C
 #include "LoRaMenu.h"
 #include "core/display.h"
@@ -130,28 +134,29 @@ void LoRaMenu::drawIcon() {
 }
 ```
 
-We're done for the register part. Now, we need to develop the content of the 2 methods previously declared: 
+We're done for the register part. Now, we need to develop the content of the 2 methods previously declared:
 
 1. `LoRaMenu::optionsMenu()` --> the declaration of the menu when the main item is selected
 2. `LoRaMenu::drawIcon()` --> the icon that will be draw on screen
 
 
-### Draw Icon
+#### Draw Icon
 
 ![Main Menu](help-with-bruce-development-example-lora-menu.png)
 
 **drawIcon()**
 With this function, you can draw your own icon. To be able to draw, you can use the following functions:
+
 | Function | Description |
-|:------------|:---------------|
-| `tft.drawLine() `| Draw a simple line |
+| ------------ | --------------- |
+| `tft.drawLine()` | Draw a simple line |
 | `tft.drawRect()` | Draw a rectangle |
 | `tft.drawRoundRect()` | Draw a rounded border rectangle |
-| `tft.drawCentreString() `| Display a screen center on coordinates |
+| `tft.drawCentreString()` | Display a screen center on coordinates |
 | `tft.drawCircle()` | Draw a circle |
 | `tft.drawArc()` | Draw an arc |
 | `tft.fillRect()` | Draw and fill a rectangle |
-| `tft.fillRoundRect()` | Draw and fill a rounded border rectangle  |
+| `tft.fillRoundRect()` | Draw and fill a rounded border rectangle |
 | `tft.fillCircle()` | Draw and fill a circle |
 | `tft.fillScreen()` | Fill the whole screen |
 
@@ -169,11 +174,11 @@ void LoRaMenu::drawIcon() {
 ```
 
 
-### Options Menu
+#### Options Menu
 
 ![Options Menu](help-with-bruce-development-example-lora-options-menu.png)
 
-**LoRaMenu::optionsMenu()**
+##### LoRaMenu::optionsMenu()
 
 We need to declare the options, like we started in `src/core/menu_items/LoRaMenu.cpp`. For this we use the `loopOptions()` function.
 
@@ -194,7 +199,7 @@ void LoRaMenu::optionsMenu() {
 }
 ```
 
-**Return to the main menu**
+##### Return to the main menu
 
 Use the `backToMenu()` call. It's only switching a global boolean: `returnToMenu`. This way you can implement a main menu return like this:
 
@@ -224,7 +229,7 @@ Here is an example of a dumb scan with dynamic options, in `src/modules/lora.cpp
 ```C
 void lora_scan_run() {
   char number[1];
-  
+
   // Display a banner while scanning runs in the background
   displayRedStripe("Scanning..", TFT_WHITE, FGCOLOR);
   delay(2000);

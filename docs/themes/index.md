@@ -3,9 +3,9 @@
 Themes change the device experience by allowing you to customize:
 
 * Main Menu
-   * Custom icons/images
-   * Borders
-   * Show/hide menu names
+    * Custom icons/images
+    * Borders
+    * Show/hide menu names
 * Setting the Primary Font color
 * Setting the Secondary Font Color (Non selected submenu item)
 * Setting the Background Color
@@ -13,6 +13,7 @@ Themes change the device experience by allowing you to customize:
 
 
 ## Setting a Theme
+
 Config > UI Theme > (Choose FS) > select the .json file and the theme will be set.
 
 

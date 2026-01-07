@@ -1,8 +1,12 @@
+# Bruce Wiki
+
 ![Bruce](img/bruce_banner.png)
 
-1. <a href="#what-is-bruce">What Is Bruce?</a>
-2. <a href="#what-is-bruce-for">What Is Bruce For?</a>
-3. <a href="faq.md">FAQ</a>
+Test
+
+1. [What Is Bruce?](index.md#what-is-bruce)
+2. [What Is Bruce For?](index.md#what-is-bruce-for)
+3. [FAQ](faq.md)
 
 ## What Is Bruce?
 

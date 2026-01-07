@@ -1,6 +1,6 @@
 ---
 tags:
- - _TODO
+ -  _TODO
 todo: Properly document each menu feature
 ---
 # RFID
@@ -42,21 +42,23 @@ Clonable RFID tags pose a security risk, as cloning involves creating a duplicat
     * **M5Stack [RFID2](https://docs.M5Stack.com/en/unit/rfid2) module**
     * **MFRC-522** - via [I2C](https://github.com/BruceDevices/firmware/blob/main/media/connections/rc522_stick.jpg) (Select `M5 RFID2` in the config menu)
     * **PN532** - via [I2C](https://github.com/BruceDevices/firmware/blob/main/media/connections/pn532_i2c.jpg), [SPI](https://github.com/BruceDevices/firmware/blob/main/media/connections/pn532_spi.jpg), or [BLE](https://why.yuyeye.cc/post-images/1568433091524.jpg)
-  
+
 * **RFID 125kHz**
     * **RDM6300** ([Connection Schema](https://github.com/BruceDevices/firmware/pull/182#issuecomment-2287692412))
 
 ## Features
 
 ### RFID 13.56MHz
-- :white_check_mark: Read
-- :white_check_mark: Write
-- :white_check_mark: Clone
-- :white_check_mark: Write NDEF Records (NFC tags only)
-- :white_check_mark: Erase
-- :white_check_mark: Save file
-- :white_check_mark: Load file
+
+* :white_check_mark: Read
+* :white_check_mark: Write
+* :white_check_mark: Clone
+* :white_check_mark: Write NDEF Records (NFC tags only)
+* :white_check_mark: Erase
+* :white_check_mark: Save file
+* :white_check_mark: Load file
 
 ### RFID 125kHz
-- :white_check_mark: Read
-- :white_check_mark: Save file
+
+* :white_check_mark: Read
+* :white_check_mark: Save file
