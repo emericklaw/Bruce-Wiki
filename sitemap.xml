@@ -61,7 +61,23 @@
          <lastmod>2026-01-18</lastmod>
     </url>
     <url>
+         <loc>https://wiki.bruce.computer/external-modules/ch9329/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
          <loc>https://wiki.bruce.computer/external-modules/gps/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/external-modules/micro-sd-sniffer/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/external-modules/nrf24/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/external-modules/sd-card-module/</loc>
          <lastmod>2026-01-18</lastmod>
     </url>
     <url>
@@ -145,6 +161,14 @@
          <lastmod>2026-01-18</lastmod>
     </url>
     <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/cardputer/gps/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/cyd/gps/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
          <loc>https://wiki.bruce.computer/wiring-diagrams/esp32-s3/diy-smoochiee-board/</loc>
          <lastmod>2026-01-18</lastmod>
     </url>
@@ -157,11 +181,19 @@
          <lastmod>2026-01-18</lastmod>
     </url>
     <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/m5stickc/gps/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
          <loc>https://wiki.bruce.computer/wiring-diagrams/m5stickc/sd-card-and-cc1101-nrf24/</loc>
          <lastmod>2026-01-18</lastmod>
     </url>
     <url>
          <loc>https://wiki.bruce.computer/wiring-diagrams/m5stickc/sd-card/</loc>
+         <lastmod>2026-01-18</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/t-embed/gps/</loc>
          <lastmod>2026-01-18</lastmod>
     </url>
 </urlset>
