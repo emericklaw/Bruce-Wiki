@@ -26,6 +26,13 @@ jobs:
       - name: Update CNAME file
         run: echo "wiki.bruce.emericklaw.co.uk" > CNAME
       - name: Update mkdocs.yml site_url
-        run: "sed -i 's|site_url: https://wiki.bruce.computer|site_url: https://github.emericklaw.co.uk/Bruce-Wiki|g' mkdocs.yml"
+        run: "sed -i 's|site_url: https://wiki.bruce.computer|site_url: https://wiki.bruce.emericklaw.co.uk|g' mkdocs.yml"
       - name: Deploy Preview Site
         run: mkdocs gh-deploy --force --verbose
+      - name: Add CNAME to gh-pages branch
+        run: |
+          git checkout gh-pages
+          echo "wiki.bruce.emericklaw.co.uk" > CNAME
+          git add CNAME
+          git commit -m "Add CNAME for custom domain"
+          git push origin gh-pages
