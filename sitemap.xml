@@ -81,6 +81,10 @@
          <lastmod>2026-02-08</lastmod>
     </url>
     <url>
+         <loc>https://wiki.bruce.computer/external-modules/w5500-ethernet-module/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
          <loc>https://wiki.bruce.computer/features/ble/</loc>
          <lastmod>2026-02-08</lastmod>
     </url>
@@ -165,7 +169,27 @@
          <lastmod>2026-02-08</lastmod>
     </url>
     <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/cardputer/w5500/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/cardputer-adv/cc1101-nrf24/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/cardputer-adv/gps/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/cardputer-adv/w5500/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
          <loc>https://wiki.bruce.computer/wiring-diagrams/cyd/gps/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/cyd/w5500/</loc>
          <lastmod>2026-02-08</lastmod>
     </url>
     <url>
@@ -193,7 +217,35 @@
          <lastmod>2026-02-08</lastmod>
     </url>
     <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/m5stickc/w5500/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/m5sticks3/cc1101/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/m5sticks3/gps/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/m5sticks3/nrf24/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/m5sticks3/sd-card/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/m5sticks3/w5500/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
          <loc>https://wiki.bruce.computer/wiring-diagrams/t-embed/gps/</loc>
+         <lastmod>2026-02-08</lastmod>
+    </url>
+    <url>
+         <loc>https://wiki.bruce.computer/wiring-diagrams/t-embed/w5500/</loc>
          <lastmod>2026-02-08</lastmod>
     </url>
 </urlset>
