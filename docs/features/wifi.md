@@ -34,6 +34,93 @@ Scans for a WiFi AP to either:
 * Deauth + Clone and verify, in case you are trying to get password of a WiFi network.
 
 
+## Karma Attack
+
+The Karma attack tricks devices into connecting to your ESP32 by impersonating WiFi networks they're looking for.
+
+When your phone/device wants to connect to WiFi, it constantly broadcasts "probe requests" - basically shouting "Hey, is Starbucks WiFi here?" (or whatever networks it remembers). The Karma attack listens for these probes, then immediately responds saying "Yes, I'm that network!" - even though it's not.
+
+What the New Code Does
+
+1. Sniffs for probe requests - Captures devices asking for SSIDs like "Home WiFi," "Starbucks," etc.
+2. Intelligent response system - Instead of just responding to everything, it:
+   · Tracks clients by fingerprint (not just MAC, since modern devices randomize MACs)
+   · Prioritizes vulnerable clients (devices that have probed for multiple networks)
+   · Rate-limits responses to avoid flooding
+3. Auto Portal Launch - When a device shows interest in an SSID, it can automatically spin up an Evil Portal (fake login page) to capture credentials.
+4. Clone Detection - If it sees many devices probing for the same popular SSID (like "xfinitywifi"), it will clone that network to catch more victims.
+5. Tiered Attack System - Prioritizes attacks based on:
+   · Signal strength (closer devices get higher priority)
+   · How many networks they've probed for
+   · How recently they were seen
+6. Broadcast Mode - Can actively advertise common SSIDs from a database (instead of just waiting for probes), making devices connect without them even asking.
+
+SSID Database for Broadcast Mode
+
+When using Broadcast or Full mode, place ssid_list.txt on SD card root or LittleFS root (one SSID per line). A pre-made list with ~15,000 SSIDs is available at:
+https://github.com/BruceDevices/firmware/tree/main/sd_files
+
+Key Defenses It Handles
+
+· MAC randomization - Uses behavioral fingerprinting (probe patterns, supported rates, etc.) to track devices even when MAC changes
+· Modern security - Can mimic WPA2/WPA3 networks, not just open ones
+
+The Result
+
+The device thinks "Oh, this ESP32 is the network I'm looking for" and tries to connect. Once connected, you can redirect them to a captive portal to steal passwords or just monitor traffic.
+
+---
+
+Main Karma Modes
+
+· Passive Just listens for probes, no responses.
+· Broadcast Actively advertises SSIDs from database.
+· Full Both listens AND broadcasts.
+
+Attack Settings (Toggle ON/OFF)
+
+· Auto Karma - Automatically responds to probe requests
+· Auto Portal - Launches Evil Portal automatically for interested devices
+· Deauth - Sends deauth packets to disconnect clients
+· Beaconing - Sends beacon frames to advertise networks
+· HS Capture - Captures WPA handshakes (for cracking later)
+
+Attack Strategy
+
+· Clone Mode - Detects popular SSIDs and clones them
+· Tiered Attack - Prioritizes by signal strength & activity (High → Medium → Fast)
+· Clone Detection - Automatically identifies & mimics frequently-probed networks
+
+Channel Controls
+
+· Manual channel selection (Next/Prev)
+· Auto channel hopping (interval: 500-3000ms)
+· Smart hop based on activity
+
+Active Broadcast Attack
+
+· Start/Stop broadcasting SSIDs from database
+· Speed: Fast (200ms), Normal (300ms), Slow (500ms)
+· Shows progress & stats
+
+Portal Template
+
+· Select from HTML templates (Google, Router, etc.)
+· Load custom files from SD/LittleFS
+· Password verification option
+
+Other Features
+
+· Rotate MAC - Changes your BSSID periodically
+· Save Probes - Exports captured data to CSV/PCAP
+· View Captures - Check saved portal creds & handshakes
+· Clear Probes - Reset all captured data
+
+---
+
+The attack listens for what devices want, responds pretending to be that network, then optionally launches a fake login page to steal credentials.
+
+
 ### Beacon Spam
 
 Spams SSID frames in the air.
@@ -73,7 +160,7 @@ etc...
 
 ### Deauth Flood
 
-Foods Deauth packets to all Access Points it can find.
+Floods Deauth packets to all Access Points it can find.
 
 
 ## Evil Portal
@@ -224,6 +311,42 @@ This feature does a lot of things at the same time, such as:
 ## Responder
 
 [Responder](https://github.com/lgandx/Responder){target="_blank" rel="noopener"} is a well known tool for exploiting infrastructures, one of the things it does is LLMNR Poisoning, which is what this function in Bruce does (thanks to [7h30th3r0n3](https://github.com/7h30th3r0n3){target="_blank" rel="noopener"}).
+
+## SOCKS4 Proxy
+
+Bruce can act as a **SOCKS4 proxy**, default port **1080**. Traffic from your apps goes through the ESP32.
+
+**How to start:** WiFi → **SOCKS4 Proxy**. The screen shows the ESP32 IP and port; press **Esc** to exit.
+
+**Use it from your PC or phone:**
+
+- **curl:** `curl -x socks4://<esp32_ip>:1080 http://example.com`
+- **proxychains:** On `proxychains.conf` set `socks4 <esp32_ip> 1080`, then run `proxychains <your_command>`.
+
+Make sure the device running curl/SSH/proxychains is on the same network as the ESP32 (e.g. same Wi‑Fi or hotspot).
+
+## Wifi Password Recovery
+
+This feature recovers WiFi passwords using a wordlist of your choice. It attempts to crack a **captured handshake** by testing passwords from the selected wordlist until the correct one is found.
+
+### Usage
+
+1. Open **WiFi → Wifi Password Recovery**
+2. Select a **wordlist**
+3. Select a **handshake capture (.pcap/.cap)**
+4. Wait while Bruce tests passwords from the list
+5. If the password is found, it will be displayed on screen
+
+### Notes
+
+- Requires a **valid captured handshake**
+- Wordlists should be stored in `/wordlists`
+- Handshake captures should be stored in `/BrucePCAP`
+- Press **SEL** to stop the process at any time
+- User should manually put **WORDLIST** inside `/wordlists`
+
+
+
 
 
 ## Config
