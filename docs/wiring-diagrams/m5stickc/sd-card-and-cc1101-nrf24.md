@@ -5,7 +5,7 @@ title: SD Card and CC1101/NRF24
 
 ## Items Needed
 
-* [CC1101](../../external-modules/sd-card-module.md#modules)
+* [SD Card Module](../../external-modules/sd-card-module.md#modules)
 * BC547 Transistor - [Find on AliExpress](https://www.aliexpress.com/w/wholesale-BC547.html)
 * Resistors [Find on AliExpress](https://www.aliexpress.com/w/wholesale-Resistors.html)
     * 1x 10k
