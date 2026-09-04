@@ -12,7 +12,7 @@ Some [example scripts are here](https://github.com/BruceDevices/firmware/tree/ma
 
 ## Uploading Your Scripts to Device
 
-You can copy your favourite scripts in the `/scripts` folder and have them listed in the `Scripts` menu.
+You can copy your favourite scripts in the `/BruceJS` folder and have them listed in the `JS Interpreter` menu.
 
 Use the [WebUI](../controlling-device/webui.md).
 

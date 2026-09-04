@@ -14,7 +14,7 @@ Some changes were made and some new functions were added, and more are to be add
 
 Some [example scripts are here](https://github.com/BruceDevices/firmware/tree/main/sd_files/interpreter).
 
-You can copy your favourite scripts in the `/scripts` folder and have them listed in the ["Scripts" menu](https://github.com/BruceDevices/firmware/issues/258).
+You can copy your favourite scripts in the `/BruceJS` folder and have them listed in the ["Scripts" menu](https://github.com/BruceDevices/firmware/issues/258).
 
 For easier development, you can use [this bash script to upload code directly via serial](https://github.com/eadmaster/Bruce/blob/53090dabfdfb1ed19314b99abb441961c29469b2/bin/bruceserialrun).
 
@@ -491,7 +491,7 @@ API Reference for Native Functions Accessible from JS:
 
 ### `serialCmd(cmd : string)`
 
-**Description**: Execute a supported serial command (see the [list here](../controlling-device/serial.md));
+**Description**: Execute a supported serial command (see the [list here](../../controlling-device/serial.md));
 
 **Parameters**:
 
