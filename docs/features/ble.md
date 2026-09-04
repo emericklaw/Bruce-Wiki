@@ -47,8 +47,8 @@ Simulate a keyboard to deploy DuckyScripts to paired devices.
 
 Sends bluetooth device pairing following AppleJuice and SourApple packet samples
 
-* **[AppleJuice](https://github.com/ECTO-1A/AppleJuice):** iOS Bluetooth pairing spam.
-* **[SourApple](https://github.com/RapierXbox/ESP32-Sour-Apple):** iOS Bluetooth crash exploit.
+* **[AppleJuice](https://github.com/ECTO-1A/AppleJuice){target="_blank" rel="noopener"}:** iOS Bluetooth pairing spam.
+* **[SourApple](https://github.com/RapierXbox/ESP32-Sour-Apple){target="_blank" rel="noopener"}:** iOS Bluetooth crash exploit.
 
 
 ### SwiftPair Spamming
@@ -73,4 +73,4 @@ A universal option to spam all supported devices simultaneously, it is more effe
 
 ## iBeacon
 
-Simulate an Apple [iBeacon/Airtag](https://en.m.wikipedia.org/wiki/IBeacon). It can be tracked with an app like [Beacon Locator](https://f-droid.org/en/packages/com.samebits.beacon.locator/), which also provides an estimation of the distance.
+Simulate an Apple [iBeacon/Airtag](https://en.m.wikipedia.org/wiki/IBeacon){target="_blank" rel="noopener"}. It can be tracked with an app like [Beacon Locator](https://f-droid.org/en/packages/com.samebits.beacon.locator/){target="_blank" rel="noopener"}, which also provides an estimation of the distance.

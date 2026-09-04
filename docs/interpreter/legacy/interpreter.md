@@ -14,11 +14,11 @@ The Bruce JS Interpreter allows you to create scripts or even games using JavaSc
 
 For legacy version of this page go here: [Interpreter Legacy](legacy.md)
 
-Some [example scripts are here](https://github.com/BruceDevices/firmware/tree/main/sd_files/interpreter).
+Some [example scripts are here](https://github.com/BruceDevices/firmware/tree/main/sd_files/interpreter){target="_blank" rel="noopener"}.
 
-You can copy your favourite scripts in the `/BruceJS` folder and have them listed in the ["Scripts" menu](https://github.com/BruceDevices/firmware/issues/258).
+You can copy your favourite scripts in the `/BruceJS` folder and have them listed in the ["Scripts" menu](https://github.com/BruceDevices/firmware/issues/258){target="_blank" rel="noopener"}.
 
-For easier development, you can use [this bash script to upload code directly via serial](https://github.com/eadmaster/Bruce/blob/53090dabfdfb1ed19314b99abb441961c29469b2/bin/bruceserialrun). (linux only)
+For easier development, you can use [this bash script to upload code directly via serial](https://github.com/eadmaster/Bruce/blob/53090dabfdfb1ed19314b99abb441961c29469b2/bin/bruceserialrun){target="_blank" rel="noopener"}. (linux only)
 Or this [TypeScript developement SDK](../typescript.md) works in linux and windows.
 
 ### Important: JavaScript Compatibility

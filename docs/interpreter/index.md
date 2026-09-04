@@ -4,7 +4,7 @@ Welcome to the Bruce JavaScript API documentation. This section provides compreh
 
 ## Overview
 
-The Bruce firmware includes a powerful JavaScript interpreter built on [MicroQuickJS](https://github.com/bellard/mquickjs) that provides access to device hardware and functionality through a rich set of APIs. These APIs allow you to create custom scripts for device interaction, automation, and development.
+The Bruce firmware includes a powerful JavaScript interpreter built on [MicroQuickJS](https://github.com/bellard/mquickjs){target="_blank" rel="noopener"} that provides access to device hardware and functionality through a rich set of APIs. These APIs allow you to create custom scripts for device interaction, automation, and development.
 
 It allows you to create apps or even games using JavaScript.
 

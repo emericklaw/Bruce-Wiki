@@ -8,7 +8,7 @@ The Bruce JS Interpreter allows you to create apps or games using JavaScript.
 
 ## Example Scripts
 
-Some [example scripts are here](https://github.com/BruceDevices/firmware/tree/main/sd_files/interpreter).
+Some [example scripts are here](https://github.com/BruceDevices/firmware/tree/main/sd_files/interpreter){target="_blank" rel="noopener"}.
 
 ## Uploading Your Scripts to Device
 
