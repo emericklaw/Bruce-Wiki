@@ -46,9 +46,9 @@ You can separate the PCBs by carefully bending them over the edge of a table or 
 
 Once separated, you should have four individual PCBs:
 
-* **Front PCB** — the larger front board
-* **Back PCB** — the larger rear board
-* **Side PCB × 2** — the smaller boards that connect to front and back PCBs
+* **Front PCB** - the larger front board
+* **Back PCB** - the larger rear board
+* **Side PCB × 2** - the smaller boards that connect to front and back PCBs
 
 The side PCBs will be fitted to the front and back PCBs later in the assembly process.
 

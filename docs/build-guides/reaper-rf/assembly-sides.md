@@ -79,13 +79,13 @@ Once the SMA tail is securely soldered and you have confirmed that there are no 
 
 ## Battery
 
-Connect the battery to the **cream/beige JST-PH 1.25 mm connector** on the rear of the front PCB.
+Connect the battery to the **cream/beige JST 1.25 mm connector** on the rear of the front PCB.
 
 ![Battery Connection](images/37-battery-connector.jpg){ width="200" }
 
 > **Important:** The battery connector is keyed to prevent it from being inserted the wrong way around. **Do not force the connector into the socket.** If it does not fit easily, remove it and check that it is correctly aligned.
 
-> **⚠️ Very Important — Check Battery Polarity**
+> **⚠️ Very Important - Check Battery Polarity**
 >
 > Before connecting the battery, carefully check that the wires are connected to the battery connector with the correct polarity.
 >

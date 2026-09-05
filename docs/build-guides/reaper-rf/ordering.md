@@ -69,11 +69,21 @@ You can also use a UFL-to-SMA cable and cut the SMA end off.
 
 ### Battery
 
-**102050 battery with two wires and a PH 1.25 mm plug.**
+**102050 LiPo battery with two wires and a JST-PH 1.25 mm pitch plug.**
 
-![102050 Battery](battery-102050-ph125.png){ width="200" }
+![102050 Battery](battery-102050-125.png){ width="200" }
 
 [Search AliExpress](https://www.aliexpress.com/w/wholesale-102050-battery-1.25.html){target="_blank" rel="noopener"}
+
+> **Note:** If you have difficulty finding a 102050 battery with a 1.25 mm pitch connector, you can purchase a 102050 battery without a connector and a set of wires with a matching 1.25 mm pitch connector.
+>
+> The connector wires can then be soldered to the battery wires. **Take care to ensure that the polarity is correct** when fitting the connector.
+>
+> ![JST 1.25mm Wires](jst-wires-125.png){ width="200" }
+>
+> [Search AliExpress](https://www.aliexpress.com/w/wholesale-jst-1.25-wires.html){target="_blank" rel="noopener"}
+>
+> **⚠️ Important:** When soldering wires to a LiPo battery, take care to prevent the battery wires from touching each other or any metal object. A short circuit can damage the battery and may create a fire hazard.
 
 
 ### Fasteners
